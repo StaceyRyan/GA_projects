@@ -1,0 +1,2 @@
+class PostcodeZone < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  classification: MyString
+  common_name: MyString
+  scientific_name: MyString
+  image: 
+  origin: MyString
+  australian_growing_zone: MyString
+  predators: MyString
+  palatability: MyString
+  toxicity: MyString
+  control: MyString
+  notes: MyString
+  external_link: MyString
+
+two:
+  classification: MyString
+  common_name: MyString
+  scientific_name: MyString
+  image: 
+  origin: MyString
+  australian_growing_zone: MyString
+  predators: MyString
+  palatability: MyString
+  toxicity: MyString
+  control: MyString
+  notes: MyString
+  external_link: MyString
