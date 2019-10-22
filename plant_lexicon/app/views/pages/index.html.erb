@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Plant Lexicon</title>
+</head>
+
+<body>
+<!-- sidebar -->
+<div class="sidebar">
+  <h5> Where in the world are you? </h5>
+  <%= image_tag("/assets/world_map.jpg",  alt: "map", class: "sidebar_image") %>
+  <br>
+
+  <h5> Weather </h5>
+  <%= image_tag("/assets/weather.jpg",  alt: "weather", class: "sidebar_image") %>
+
+
+</div>
+
+<!-- page content -->
+<div class="content">
+</div>
+<h1>Welcome to the Plant Lexicon </h1>
+<h3> You are in basic view</h3>
+<h5>Log-in to access the full view</h5>
+
+<table>
+  <% @plants_all.each do |plants| %>
+  <tr>
+    <th><%= plants[:name] %>
+    <%= link_to 'link', show_plants_path(plant[:id]) %></th>
+  </tr>
+    <% end %>
+</table>
+
+</body>
+</html>

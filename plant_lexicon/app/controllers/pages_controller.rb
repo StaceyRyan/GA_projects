@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
 
-  before_action :authorize
+  # before_action :authorize
 
-  def welcome
+  def index
 
   end
 

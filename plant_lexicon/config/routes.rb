@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  root to: 'pages#index', as: 'home'
+
+  get 'pages/index'
+
   get 'users/new'
   get 'users/create'
 
-  root to: 'pages#welcome'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-get '/register' => 'users#new'
-  post '/users' => 'users#create'
+  get 'users/register' => 'users#new', :as => 'register_new_user'
+  post 'users/create' => 'users#create', :as => 'create_user'
 end

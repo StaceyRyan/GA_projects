@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: plant_lexicon_production
-  username: plant_lexicon
-  password: <%= ENV['PLANT_LEXICON_DATABASE_PASSWORD'] %>
+#  username: plant_lexicon
+#  password: <%= ENV['PLANT_LEXICON_DATABASE_PASSWORD'] %>

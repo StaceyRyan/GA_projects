@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: #94b595;
+}
+
+h1 {
+    font-family: Sans-Serif;
+}
+h3 {
+    font-family: Sans-Serif;
+}
+
+h5 {
+    font-family: Sans-Serif;
+}
+
+.sidebar_image {
+    height: 7em;
+    width: 10em;
+}
+.sidebar {
+    width: 25%;
+    height: 100%;
+    display: block;
+    float: left;
+    border-right-style: groove;
+    align: center;
+}
+
+
+.content {
+    margin-left: 75%;
+    height: 100%;
+    display: block;
+    float: right;
+    border-left-style: groove;
+}
