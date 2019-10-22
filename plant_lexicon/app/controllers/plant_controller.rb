@@ -2,6 +2,7 @@ class PlantController < ApplicationController
   def index
     @header = 'Plant Lexicon'
     @plants_all = Plant.all
+    puts ""
   end
 
   def new
@@ -9,7 +10,7 @@ class PlantController < ApplicationController
   end
 
   def show
-    @plants = Plant.find(params[:id])
+    @plant = Plant.find(params[:id])
 
   end
 

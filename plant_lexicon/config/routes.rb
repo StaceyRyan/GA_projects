@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#index', as: 'home'
 
-  get 'pages/index'
+  get 'pages/index', as: 'show_plants'
 
   get 'users/new'
   get 'users/create'

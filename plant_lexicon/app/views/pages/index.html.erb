@@ -29,10 +29,11 @@
 <h5>Log-in to access the full view</h5>
 
 <table>
-  <% @plants_all.each do |plants| %>
+  <% @plants_all.each do |plant| %>
   <tr>
-    <th><%= plants[:name] %>
-    <%= link_to 'link', show_plants_path(plant[:id]) %></th>
+    <th><%= plant[:name] %>
+    <%= link_to 'link', show_plants_path(plant[:id]) %>
+    </th>
   </tr>
     <% end %>
 </table>

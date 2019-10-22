@@ -1401,3 +1401,174 @@ ActionView::Template::Error (undefined local variable or method `plants' for #<#
     37:     <%# end %>
   
 app/views/pages/index.html.erb:34
+Started GET "/" for 127.0.0.1 at 2019-10-22 21:06:48 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 36.4ms | Allocations: 1441)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms | Allocations: 3587)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    29: <h5>Log-in to access the full view</h5>
+    30: 
+    31: <table>
+    32:   <% @plants_all.each do |plants| %>
+    33:   <tr>
+    34:     <th><%= plants[:name] %>
+    35:     <%= link_to 'link', show_plants_path(plant[:id]) %></th>
+  
+app/views/pages/index.html.erb:32
+Started GET "/" for 127.0.0.1 at 2019-10-22 21:07:50 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1210)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2771)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    29: <h5>Log-in to access the full view</h5>
+    30: 
+    31: <table>
+    32:   <% @plants_all.each do |plants| %>
+    33:   <tr>
+    34:     <th><%= plants[:name] %>
+    35:     <%= link_to 'link', show_plants_path(plant[:id]) %></th>
+  
+app/views/pages/index.html.erb:32
+Started GET "/" for 127.0.0.1 at 2019-10-22 21:19:10 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1445)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms | Allocations: 3591)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    29: <h5>Log-in to access the full view</h5>
+    30: 
+    31: <table>
+    32:   <% @plants_all.each do |plants| %>
+    33:   <tr>
+    34:     <th><%= plants[:name] %>
+    35:     <%= link_to 'link', show_plants_path(plant[:id]) %>
+  
+app/views/pages/index.html.erb:32
+Started GET "/" for 127.0.0.1 at 2019-10-22 21:23:00 +1100
+  [1m[35m (47.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1975)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 3830)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    29: <h5>Log-in to access the full view</h5>
+    30: 
+    31: <table>
+    32:   <% @plants_all.each do |plants| %>
+    33:   <tr>
+    34:     <th><%= plants[:name] %>
+    35:     <%= link_to 'link', show_plants_path(plant[:id]) %>
+  
+app/views/pages/index.html.erb:32
+Started GET "/" for 127.0.0.1 at 2019-10-22 21:23:51 +1100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2087)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 4035)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    29: <h5>Log-in to access the full view</h5>
+    30: 
+    31: <table>
+    32:   <% @plants_all.each do |plants| %>
+    33:   <tr>
+    34:     <th><%= plants[:name] %>
+    35:     <%= link_to 'link', show_plants_path(plant[:id]) %>
+  
+app/views/pages/index.html.erb:32
+Started GET "/" for 127.0.0.1 at 2019-10-22 21:24:14 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1356)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1736)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    29: <h5>Log-in to access the full view</h5>
+    30: 
+    31: <table>
+    32:   <% @plants_all.each do |plants| %>
+    33:   <tr>
+    34:     <th><%= plants[:name] %>
+    35:     <%= link_to 'link', show_plants_path(plant[:id]) %>
+  
+app/views/pages/index.html.erb:32
+Started GET "/" for 127.0.0.1 at 2019-10-22 21:25:48 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPlant Load (33.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/pages/index.html.erb:32
+  Rendered pages/index.html.erb within layouts/application (Duration: 911.7ms | Allocations: 158420)
+Completed 500 Internal Server Error in 920ms (ActiveRecord: 333.8ms | Allocations: 159356)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `plant' for #<#<Class:0x00007fe7e34a7ae0>:0x00007fe7e34a61e0>
+Did you mean?  plants):
+    32:   <% @plants_all.each do |plants| %>
+    33:   <tr>
+    34:     <th><%= plants[:name] %>
+    35:     <%= link_to 'link', show_plants_path(plant[:id]) %>
+    36:     </th>
+    37:   </tr>
+    38:     <% end %>
+  
+app/views/pages/index.html.erb:35
+app/views/pages/index.html.erb:32
+Started GET "/" for 127.0.0.1 at 2019-10-22 21:26:14 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/pages/index.html.erb:32
+  Rendered pages/index.html.erb within layouts/application (Duration: 269.8ms | Allocations: 76429)
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.7ms | Allocations: 77572)
+
+
+  
+ActionView::Template::Error (undefined method `show_plants_path' for #<#<Class:0x00007fe7e0388130>:0x00007fe7e3386800>):
+    32:   <% @plants_all.each do |plant| %>
+    33:   <tr>
+    34:     <th><%= plant[:name] %>
+    35:     <%= link_to 'link', show_plants_path(plant[:id]) %>
+    36:     </th>
+    37:   </tr>
+    38:     <% end %>
+  
+app/views/pages/index.html.erb:35
+app/views/pages/index.html.erb:32
+Started GET "/" for 127.0.0.1 at 2019-10-22 21:28:26 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPlant Load (1.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/pages/index.html.erb:32
+  Rendered pages/index.html.erb within layouts/application (Duration: 87.5ms | Allocations: 10583)
+Completed 200 OK in 2299ms (Views: 2280.3ms | ActiveRecord: 9.5ms | Allocations: 1370273)
+
+
+Started GET "/pages/index.2" for 127.0.0.1 at 2019-10-22 21:28:37 +1100
+Processing by PagesController#index as 
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPlant Load (2.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/pages/index.html.erb:32
+  Rendered pages/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 844)
+Completed 200 OK in 63ms (Views: 55.8ms | ActiveRecord: 2.1ms | Allocations: 6923)
+
+
