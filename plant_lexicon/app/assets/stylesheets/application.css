@@ -40,12 +40,13 @@ h5 {
     border-right-style: groove;
     align: center;
 }
-
-
 .content {
     margin-left: 75%;
     height: 100%;
     display: block;
     float: right;
     border-left-style: groove;
+}
+#lexicon {
+    border: groove;
 }

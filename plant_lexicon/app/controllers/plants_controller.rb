@@ -1,16 +1,19 @@
-class PlantController < ApplicationController
+class PlantsController < ApplicationController
   def index
     @header = 'Plant Lexicon'
     @plants_all = Plant.all
-    puts ""
+  end
+
+  def full
+    @plants = Plant.all
+
+  end
+
+  def detailed
+
   end
 
   def new
-
-  end
-
-  def show
-    @plant = Plant.find(params[:id])
 
   end
 

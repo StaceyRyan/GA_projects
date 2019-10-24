@@ -1572,3 +1572,2385 @@ Processing by PagesController#index as
 Completed 200 OK in 63ms (Views: 55.8ms | ActiveRecord: 2.1ms | Allocations: 6923)
 
 
+Started GET "/pages/index.2" for 127.0.0.1 at 2019-10-24 15:18:17 +1100
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as 
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPlant Load (67.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/pages/index.html.erb:32
+  Rendered pages/index.html.erb within layouts/application (Duration: 161.5ms | Allocations: 11123)
+Completed 200 OK in 4952ms (Views: 4798.5ms | ActiveRecord: 128.7ms | Allocations: 1368232)
+
+
+Started GET "/pages/index.2" for 127.0.0.1 at 2019-10-24 15:27:52 +1100
+Processing by PagesController#index as 
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 0.0ms | Allocations: 3670)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007ff16fc94e98>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "/pages/index" for 127.0.0.1 at 2019-10-24 15:27:57 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2873)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007ff16fc94e98>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "/plant" for 127.0.0.1 at 2019-10-24 15:49:13 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/plant"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/full_table" for 127.0.0.1 at 2019-10-24 15:49:37 +1100
+  
+ActionController::RoutingError (uninitialized constant PlantsController
+Did you mean?  PlantController
+               PagesController):
+  
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.0) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/loggedin_basic" for 127.0.0.1 at 2019-10-24 15:50:07 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/loggedin_basic"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 15:50:22 +1100
+  
+ActionController::RoutingError (uninitialized constant PlantsController
+Did you mean?  PlantController
+               PagesController):
+  
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.0) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 15:51:27 +1100
+Processing by PlantsController#full_table as HTML
+Completed 404 Not Found in 157ms (ActiveRecord: 129.0ms | Allocations: 2277)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full_table'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 15:51:39 +1100
+Processing by PlantsController#full_table as HTML
+Completed 406 Not Acceptable in 9ms (ActiveRecord: 0.0ms | Allocations: 1984)
+
+
+  
+ActionController::MissingExactTemplate (PlantsController#full_table is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 15:52:34 +1100
+Processing by PlantsController#full_table as HTML
+  Rendering plants/full_table.html.erb within layouts/application
+  Rendered plants/full_table.html.erb within layouts/application (Duration: 1.8ms | Allocations: 93)
+Completed 200 OK in 159ms (Views: 156.4ms | ActiveRecord: 0.0ms | Allocations: 13483)
+
+
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 15:53:57 +1100
+Processing by PlantsController#full_table as HTML
+  Rendering plants/full_table.html.erb within layouts/application
+  Rendered plants/full_table.html.erb within layouts/application (Duration: 7.1ms | Allocations: 298)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 7090)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 15:53:57 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 4161)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007ff16b59f678>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 18:25:34 +1100
+  [1m[35m (58.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#full_table as HTML
+  Rendering plants/full_table.html.erb within layouts/application
+  Rendered plants/full_table.html.erb within layouts/application (Duration: 1.9ms | Allocations: 533)
+Completed 200 OK in 1582ms (Views: 1574.5ms | ActiveRecord: 0.0ms | Allocations: 1360797)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:25:36 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms | Allocations: 6691)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fd43675f0f0>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "/plants/detailed" for 127.0.0.1 at 2019-10-24 18:25:38 +1100
+Processing by PlantsController#detailed as HTML
+Completed 406 Not Acceptable in 8ms (ActiveRecord: 0.0ms | Allocations: 1977)
+
+
+  
+ActionController::MissingExactTemplate (PlantsController#detailed is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:25:39 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2873)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fd43675f0f0>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:25:43 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2870)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fd43675f0f0>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 18:25:43 +1100
+Processing by PlantsController#full_table as HTML
+  Rendering plants/full_table.html.erb within layouts/application
+  Rendered plants/full_table.html.erb within layouts/application (Duration: 0.3ms | Allocations: 114)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 20000)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:25:43 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2859)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fd43675f0f0>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 18:26:10 +1100
+Processing by PlantsController#full_table as HTML
+  Rendering plants/full_table.html.erb within layouts/application
+  Rendered plants/full_table.html.erb within layouts/application (Duration: 1.1ms | Allocations: 353)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 7127)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:26:10 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2871)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fd43675f0f0>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 18:26:13 +1100
+Processing by PlantsController#full_table as HTML
+  Rendering plants/full_table.html.erb within layouts/application
+  Rendered plants/full_table.html.erb within layouts/application (Duration: 0.4ms | Allocations: 112)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 5971)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:26:13 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2887)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fd43675f0f0>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 18:27:18 +1100
+Processing by PlantsController#full_table as HTML
+  Rendering plants/full_table.html.erb within layouts/application
+  Rendered plants/full_table.html.erb within layouts/application (Duration: 1.3ms | Allocations: 354)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 9279)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:27:18 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2859)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fd43675f0f0>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "//plants/full_table" for 127.0.0.1 at 2019-10-24 18:27:48 +1100
+Processing by PlantsController#full_table as HTML
+Completed 404 Not Found in 46ms (ActiveRecord: 39.6ms | Allocations: 2304)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full_table'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:30:35 +1100
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 4340)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fa6b6139638>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:30:44 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4184)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fa6b3583228>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:31:03 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2903)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fa6b3583228>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "/index" for 127.0.0.1 at 2019-10-24 18:31:06 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/basic_view" for 127.0.0.1 at 2019-10-24 18:31:34 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/basic_view"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2019-10-24 18:31:49 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:31:52 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2902)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fa6b3583228>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:32:39 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2902)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007fa6b3583228>
+Did you mean?  ids):
+  
+app/controllers/pages_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:33:50 +1100
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 4031)
+
+
+  
+NoMethodError (undefined method `image' for #<Class:0x00007fa6b22e7588>):
+  
+app/controllers/pages_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:33:57 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 324)
+Completed 200 OK in 2192ms (Views: 2190.4ms | ActiveRecord: 0.0ms | Allocations: 1359328)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:33:59 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 65)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 8729)
+
+
+Started GET "/plants/full_table" for 127.0.0.1 at 2019-10-24 18:34:24 +1100
+Processing by PlantsController#full_table as HTML
+  Rendering plants/full_table.html.erb within layouts/application
+  Rendered plants/full_table.html.erb within layouts/application (Duration: 2.8ms | Allocations: 373)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms | Allocations: 6776)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:34:24 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 65)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 7098)
+
+
+Started GET "/plants/full_table" for 127.0.0.1 at 2019-10-24 18:36:51 +1100
+Processing by PlantsController#full_table as HTML
+Completed 404 Not Found in 36ms (ActiveRecord: 28.6ms | Allocations: 2337)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full_table'
+Started GET "/plants/full_table" for 127.0.0.1 at 2019-10-24 18:39:15 +1100
+Processing by PlantsController#full_table as HTML
+Completed 404 Not Found in 11ms (ActiveRecord: 6.1ms | Allocations: 1947)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full_table'
+Started GET "/plants/full_table" for 127.0.0.1 at 2019-10-24 18:40:13 +1100
+Processing by PlantsController#full_table as HTML
+Completed 404 Not Found in 11ms (ActiveRecord: 5.3ms | Allocations: 1953)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full_table'
+Started GET "/plants/full_table" for 127.0.0.1 at 2019-10-24 18:48:51 +1100
+Processing by PlantsController#full_table as HTML
+Completed 404 Not Found in 8ms (ActiveRecord: 0.0ms | Allocations: 663)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full_table'
+Started GET "/plants/full_table" for 127.0.0.1 at 2019-10-24 18:50:19 +1100
+Processing by PlantsController#full_table as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 663)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full_table'
+Started GET "/plants/full_table" for 127.0.0.1 at 2019-10-24 18:51:21 +1100
+Processing by PlantsController#full_table as HTML
+Completed 404 Not Found in 21ms (ActiveRecord: 15.2ms | Allocations: 2035)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full_table'
+Started GET "/plants/full_table/1" for 127.0.0.1 at 2019-10-24 18:51:50 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/plants/full_table/1"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/1" for 127.0.0.1 at 2019-10-24 18:52:05 +1100
+Processing by PlantsController#detailed as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 0.0ms | Allocations: 2026)
+
+
+  
+ActionController::MissingExactTemplate (PlantsController#detailed is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/loggedin_detailed/1" for 127.0.0.1 at 2019-10-24 18:52:37 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/plants/loggedin_detailed/1"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/" for 127.0.0.1 at 2019-10-24 18:52:49 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/plants"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:54:16 +1100
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 448)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.9ms | Allocations: 207)
+Completed 200 OK in 2128ms (Views: 2116.3ms | ActiveRecord: 0.0ms | Allocations: 1357635)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:54:19 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 66)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 7197)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:54:47 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 180)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.3ms | Allocations: 196)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms | Allocations: 7386)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:54:47 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.0ms | Allocations: 5994)
+
+
+Started GET "/pages/index.2" for 127.0.0.1 at 2019-10-24 18:55:00 +1100
+Processing by PagesController#index as 
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 6306)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 18:55:00 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.3ms | Allocations: 66)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 6003)
+
+
+Started GET "/pages/full_table" for 127.0.0.1 at 2019-10-24 18:55:27 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/pages/full_table"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pages/loggedin_basic" for 127.0.0.1 at 2019-10-24 18:55:45 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/pages/loggedin_basic"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/loggedin_basic" for 127.0.0.1 at 2019-10-24 18:56:02 +1100
+Processing by PlantsController#detailed as HTML
+  Parameters: {"id"=>"loggedin_basic"}
+Completed 406 Not Acceptable in 9ms (ActiveRecord: 0.0ms | Allocations: 1973)
+
+
+  
+ActionController::MissingExactTemplate (PlantsController#detailed is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 18:58:52 +1100
+  
+AbstractController::ActionNotFound (The action 'full' could not be found for PlantsController):
+  
+actionpack (6.0.0) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 18:59:05 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 67ms (ActiveRecord: 23.2ms | Allocations: 2453)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:04:32 +1100
+Processing by PlantsController#full as HTML
+Completed 406 Not Acceptable in 101ms (ActiveRecord: 0.0ms | Allocations: 1986)
+
+
+  
+ActionController::MissingExactTemplate (PlantsController#full is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:05:09 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.erb within layouts/application
+  Rendered plants/full.erb within layouts/application (Duration: 16.8ms | Allocations: 1453)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms | Allocations: 2676)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    18: 
+    19: <table id="lexicon">
+    20:   <tr>
+    21:     <%= @plants_all.each do |plant| %>
+    22:     <th>
+    23:       <%= plant[:name] %>
+    24:       <%= link_to '@plant_name', loggedin_detailed_path(plant[:id]) %>
+  
+app/views/plants/full.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:05:35 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendered plants/full.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1442)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 2671)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    18: 
+    19: <table id="lexicon">
+    20:   <tr>
+    21:     <%= @plants_all.each do |plant| %>
+    22:     <th>
+    23:       <%= plant[:name] %>
+    24:       <%= link_to '@plant_name', loggedin_detailed_path(plant[:id]) %>
+  
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:05:55 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendered plants/full.html.erb within layouts/application (Duration: 583.9ms | Allocations: 146520)
+Completed 500 Internal Server Error in 600ms (ActiveRecord: 0.0ms | Allocations: 147750)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `plant' for #<#<Class:0x00007fc920269f08>:0x00007fc920268090>):
+    20:   <tr>
+    21:     <%#= @plants_all.each do |plant| %>
+    22:     <th>
+    23:       <%= plant[:name] %>
+    24:       <%= link_to '@plant_name', loggedin_detailed_path(plant[:id]) %>
+    25:     </th>
+    26:     <th>
+  
+app/views/plants/full.html.erb:23
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:06:15 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendered plants/full.html.erb within layouts/application (Duration: 491.6ms | Allocations: 146508)
+Completed 500 Internal Server Error in 500ms (ActiveRecord: 0.0ms | Allocations: 147738)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `plants' for #<#<Class:0x00007fc91e7b0ec8>:0x00007fc91e7975e0>):
+    20:   <tr>
+    21:     <%#= @plants_all.each do |plant| %>
+    22:     <th>
+    23:       <%= plants[:name] %>
+    24:       <%= link_to '@plant_name', loggedin_detailed_path(plant[:id]) %>
+    25:     </th>
+    26:     <th>
+  
+app/views/plants/full.html.erb:23
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:10:37 +1100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendered plants/full.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1887)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 3887)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    18: 
+    19: <table id="lexicon">
+    20:   <tr>
+    21:     <%= @plants.each do |plant| %>
+    22:     <th>
+    23:       <%= plant.name %>
+    24:       <%= link_to '@plant_name', loggedin_detailed_path(plant[:id]) %>
+  
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:10:58 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendered plants/full.html.erb within layouts/application (Duration: 457.5ms | Allocations: 146343)
+Completed 500 Internal Server Error in 462ms (ActiveRecord: 0.0ms | Allocations: 147590)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `plant' for #<#<Class:0x00007fdfa1d2e460>:0x00007fdfa1d2ca98>):
+    20:   <tr>
+    21:     <%#= @plants.each do |plant| %>
+    22:     <th>
+    23:       <%= plant.name %>
+    24:       <%= link_to '@plant_name', loggedin_detailed_path(plant[:id]) %>
+    25:     </th>
+    26:     <th>
+  
+app/views/plants/full.html.erb:23
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:11:12 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendered plants/full.html.erb within layouts/application (Duration: 435.2ms | Allocations: 146328)
+Completed 500 Internal Server Error in 440ms (ActiveRecord: 0.0ms | Allocations: 147558)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `plants' for #<#<Class:0x00007fdfa0d25820>:0x00007fdfa0d2fb90>):
+    20:   <tr>
+    21:     <%#= @plants.each do |plant| %>
+    22:     <th>
+    23:       <%= plants.name %>
+    24:       <%= link_to '@plant_name', loggedin_detailed_path(plant[:id]) %>
+    25:     </th>
+    26:     <th>
+  
+app/views/plants/full.html.erb:23
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:11:52 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 146ms (ActiveRecord: 137.8ms | Allocations: 2404)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:18:51 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 33ms (ActiveRecord: 0.0ms | Allocations: 663)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:19:09 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 57ms (ActiveRecord: 49.2ms | Allocations: 2035)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:29:30 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 5ms (ActiveRecord: 0.0ms | Allocations: 1497)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:30:11 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 657)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:30:41 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendered plants/full.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1403)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 2636)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+    18: 
+    19: <table id="lexicon">
+    20:   <tr>
+    21:     <%= @plants.all.each do |plant| %>
+    22:     <th>
+    23:       <%= plants.name %>
+    24:       <%= link_to '@plant_name', loggedin_detailed_path(plant[:name]) %>
+  
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 19:31:31 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 100ms (ActiveRecord: 90.2ms | Allocations: 1963)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:06:19 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 16ms (ActiveRecord: 0.0ms | Allocations: 1497)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:07:46 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 11ms (ActiveRecord: 0.0ms | Allocations: 657)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:8:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:09:44 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (111.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 559.9ms | Allocations: 14437)
+Completed 500 Internal Server Error in 572ms (ActiveRecord: 441.3ms | Allocations: 16009)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Plant:0x00007fdfa1b110b0>):
+    20:   <tr>
+    21:     <%= @plant.each do |plant| %>
+    22:     <th>
+    23:       <%= plant.name %>
+    24:       <%#= link_to '@plant_name', loggedin_detailed_path(plant[:id]) %>
+    25:     </th>
+    26:     <th>
+  
+app/views/plants/full.html.erb:23
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:11:24 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (9.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1836)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.9ms | Allocations: 219)
+Completed 200 OK in 3285ms (Views: 3273.1ms | ActiveRecord: 9.1ms | Allocations: 1358336)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:11:28 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 185)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.4ms | Allocations: 66)
+Completed 200 OK in 109ms (Views: 103.1ms | ActiveRecord: 0.0ms | Allocations: 6722)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:17:38 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 10ms (ActiveRecord: 0.0ms | Allocations: 1495)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:9:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:18:08 +1100
+Processing by PlantsController#full as HTML
+Completed 404 Not Found in 521ms (ActiveRecord: 481.4ms | Allocations: 1980)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant without an ID):
+  
+app/controllers/plants_controller.rb:9:in `full'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:18:51 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (47.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 91.8ms | Allocations: 11170)
+  Rendered layouts/_sidebar.html.erb (Duration: 2.2ms | Allocations: 196)
+Completed 200 OK in 125ms (Views: 70.0ms | ActiveRecord: 52.7ms | Allocations: 18677)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:18:52 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 178)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 6713)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2019-10-24 20:18:55 +1100
+Processing by PlantsController#detailed as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 8ms (ActiveRecord: 0.0ms | Allocations: 2011)
+
+
+  
+ActionController::MissingExactTemplate (PlantsController#detailed is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:18:55 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 6000)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:19:05 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 5)
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:19:05 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (3.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1774)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.0ms | Allocations: 11615)
+
+
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 66)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 3.0ms | Allocations: 9213)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:19:05 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 66)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 5988)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:21:30 +1100
+  [1m[35m (17.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 403.9ms | Allocations: 85801)
+Completed 500 Internal Server Error in 430ms (ActiveRecord: 12.0ms | Allocations: 88158)
+
+
+  
+ActionView::Template::Error (undefined method `plants' for #<#<Class:0x00007f8e762f8df0>:0x00007f8e76309a10>):
+    21:     <%= @plant.each do |plant| %>
+    22:     <th>
+    23:       <%= plant.common_name %>
+    24:       <%= link_to 'link', loggedin_detailed_path(plants(:common_name)) %>
+    25:     </th>
+    26:     <th>
+    27:       <img src=<%= @plant_img %>/>
+  
+app/views/plants/full.html.erb:24
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:21:44 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (1.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 222.8ms | Allocations: 76499)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 1.4ms | Allocations: 77776)
+
+
+  
+ActionView::Template::Error (undefined method `plant' for #<#<Class:0x00007f8e72a02cf8>:0x00007f8e72a01330>):
+    21:     <%= @plant.each do |plant| %>
+    22:     <th>
+    23:       <%= plant.common_name %>
+    24:       <%= link_to 'link', loggedin_detailed_path(plant(:common_name)) %>
+    25:     </th>
+    26:     <th>
+    27:       <img src=<%= @plant_img %>/>
+  
+app/views/plants/full.html.erb:24
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:22:04 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (1.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1833)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.9ms | Allocations: 3080)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"detailed", :controller=>"plants"}, missing required keys: [:id]):
+    21:     <%= @plant.each do |plant| %>
+    22:     <th>
+    23:       <%= plant.common_name %>
+    24:       <%= link_to 'link', loggedin_detailed_path %>
+    25:     </th>
+    26:     <th>
+    27:       <img src=<%= @plant_img %>/>
+  
+app/views/plants/full.html.erb:24
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:22:22 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (8.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 16.9ms | Allocations: 1816)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 8.8ms | Allocations: 3069)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"detailed", :controller=>"plants"}, missing required keys: [:id]):
+    21:     <%= @plant.each do |plant| %>
+    22:     <th>
+    23:       <%= plant.common_name %>
+    24:       <%= link_to 'link', loggedin_detailed_path[:id] %>
+    25:     </th>
+    26:     <th>
+    27:       <img src=<%= @plant_img %>/>
+  
+app/views/plants/full.html.erb:24
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:23:21 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1610)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.9ms | Allocations: 2105)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"detailed", :controller=>"plants"}, missing required keys: [:id]):
+    21:     <%= @plant.each do |plant| %>
+    22:     <th>
+    23:       <%= plant.common_name %>
+    24:       <%= link_to 'link', loggedin_detailed_path[:id] %>
+    25:     </th>
+    26:     <th>
+    27:       <img src=<%= @plant_img %>/>
+  
+app/views/plants/full.html.erb:24
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:23:46 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 21.6ms | Allocations: 10839)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 4.7ms | Allocations: 11868)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"detailed", :controller=>"plants"}, missing required keys: [:id]):
+    21:     <%= @plant.each do |plant| %>
+    22:     <th>
+    23:       <%= plant.common_name %>
+    24:       <%= link_to 'link', loggedin_detailed_path[:id] %>
+    25:     </th>
+    26:     <th>
+    27:       <img src=<%= @plant_img %>/>
+  
+app/views/plants/full.html.erb:24
+app/views/plants/full.html.erb:21
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:24:07 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1893)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.8ms | Allocations: 219)
+Completed 200 OK in 1885ms (Views: 1883.2ms | ActiveRecord: 0.7ms | Allocations: 1358362)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:24:09 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 198)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 66)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 7525)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2019-10-24 20:24:12 +1100
+  
+AbstractController::ActionNotFound (The action 'detailed' could not be found for PlantsController):
+  
+actionpack (6.0.0) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:24:12 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 66)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 6002)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:24:22 +1100
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:24:22 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 66)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 6126)
+
+
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 24.5ms | Allocations: 11057)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 66)
+Completed 200 OK in 34ms (Views: 24.2ms | ActiveRecord: 8.2ms | Allocations: 17555)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:24:23 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 6383)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2019-10-24 20:24:24 +1100
+Processing by PlantsController#detailed as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 6ms (ActiveRecord: 0.0ms | Allocations: 2016)
+
+
+  
+ActionController::MissingExactTemplate (PlantsController#detailed is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:24:24 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.4ms | Allocations: 66)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms | Allocations: 6001)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:25:32 +1100
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:25:32 +1100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#full as HTML
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 186)
+  [1m[36mPlant Load (1.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 344.3ms | Allocations: 295570)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.6ms | Allocations: 545)
+Completed 200 OK in 3596ms (Views: 3325.1ms | ActiveRecord: 219.4ms | Allocations: 2434276)
+
+
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 3539ms (Views: 3535.8ms | ActiveRecord: 0.0ms | Allocations: 2431357)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:25:36 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 7190)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2019-10-24 20:26:02 +1100
+Processing by PlantsController#detailed as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 8ms (ActiveRecord: 0.0ms | Allocations: 2016)
+
+
+  
+ActionController::MissingExactTemplate (PlantsController#detailed is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:26:02 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 66)
+Completed 200 OK in 52ms (Views: 47.5ms | ActiveRecord: 0.0ms | Allocations: 6019)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:26:27 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:26:27 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (1.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:21
+  Rendered plants/full.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1783)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 14064)
+
+
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 1.7ms | Allocations: 9266)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:26:27 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.9ms | Allocations: 66)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 5990)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:29:34 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (2.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:20
+  Rendered plants/full.html.erb within layouts/application (Duration: 42.0ms | Allocations: 1844)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.1ms | Allocations: 196)
+Completed 200 OK in 101ms (Views: 87.5ms | ActiveRecord: 2.6ms | Allocations: 9052)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:30:25 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendered plants/full.html.erb within layouts/application (Duration: 0.4ms | Allocations: 101)
+  Rendered layouts/_sidebar.html.erb (Duration: 3.2ms | Allocations: 196)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 7310)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:30:50 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:20
+  Rendered plants/full.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1876)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.9ms | Allocations: 196)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.9ms | Allocations: 9095)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:30:50 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 178)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms | Allocations: 6754)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:31:19 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  Rendered plants/full.html.erb within layouts/application (Duration: 0.6ms | Allocations: 102)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.1ms | Allocations: 196)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.0ms | Allocations: 7304)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:31:54 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (35.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:20
+  Rendered plants/full.html.erb within layouts/application (Duration: 45.2ms | Allocations: 1924)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.7ms | Allocations: 196)
+Completed 200 OK in 100ms (Views: 61.5ms | ActiveRecord: 35.4ms | Allocations: 9128)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:31:54 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 475)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 66)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.0ms | Allocations: 7930)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:33:39 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 66)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 6123)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:33:39 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 66)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 6336)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:34:02 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (12.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:19
+  Rendered plants/full.html.erb within layouts/application (Duration: 85.5ms | Allocations: 11225)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.8ms | Allocations: 196)
+Completed 200 OK in 132ms (Views: 61.8ms | ActiveRecord: 60.9ms | Allocations: 18781)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:34:02 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 178)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 66)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 6738)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:36:23 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:20
+  Rendered plants/full.html.erb within layouts/application (Duration: 62.7ms | Allocations: 11073)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.8ms | Allocations: 196)
+Completed 200 OK in 106ms (Views: 77.5ms | ActiveRecord: 22.2ms | Allocations: 18566)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:36:24 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 178)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.0ms | Allocations: 66)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 6692)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:39:46 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (55.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:20
+  Rendered plants/full.html.erb within layouts/application (Duration: 79.4ms | Allocations: 1802)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.1ms | Allocations: 196)
+Completed 200 OK in 167ms (Views: 98.2ms | ActiveRecord: 55.3ms | Allocations: 9006)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:39:46 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 178)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.5ms | Allocations: 66)
+Completed 200 OK in 81ms (Views: 76.7ms | ActiveRecord: 0.0ms | Allocations: 8523)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:39:55 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (9.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:20
+  Rendered plants/full.html.erb within layouts/application (Duration: 18.0ms | Allocations: 883)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.2ms | Allocations: 201)
+Completed 200 OK in 260ms (Views: 246.3ms | ActiveRecord: 9.3ms | Allocations: 8086)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-24 20:39:56 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 325)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 66)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 7561)
+
+
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:42:33 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (37.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:20
+  Rendered plants/full.html.erb within layouts/application (Duration: 43.6ms | Allocations: 913)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.1ms | Allocations: 196)
+Completed 200 OK in 76ms (Views: 35.3ms | ActiveRecord: 37.6ms | Allocations: 8121)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (6.0.0) lib/active_support/logger_silence.rb:36:in `silence'
+activesupport (6.0.0) lib/active_support/logger.rb:64:in `block (3 levels) in broadcast'
+activesupport (6.0.0) lib/active_support/logger_silence.rb:36:in `silence'
+activesupport (6.0.0) lib/active_support/logger.rb:62:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/full" for 127.0.0.1 at 2019-10-24 20:43:20 +1100
+Processing by PlantsController#full as HTML
+  Rendering plants/full.html.erb within layouts/application
+  [1m[36mPlant Load (1.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/full.html.erb:20
+  Rendered plants/full.html.erb within layouts/application (Duration: 7.8ms | Allocations: 908)
+  Rendered layouts/_sidebar.html.erb (Duration: 1.6ms | Allocations: 196)
+Completed 200 OK in 43ms (Views: 36.3ms | ActiveRecord: 1.6ms | Allocations: 8105)
+
+
