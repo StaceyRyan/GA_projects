@@ -13,8 +13,21 @@
  *= require_tree .
  *= require_self
  */
-body {
+.window {
     background-color: #94b595;
+    display: flex;
+    flex-direction: row;
+}
+.sidebar {
+    background-color: #94b595;
+    border-right-style: groove;
+    width: 25%;
+    flex: 1;
+}
+.content {
+    background-color: #94b595;
+    border-left-style: groove;
+    flex: 2;
 }
 
 h1 {
@@ -22,6 +35,9 @@ h1 {
 }
 h3 {
     font-family: Sans-Serif;
+}
+h4 {
+    font-style: italic;
 }
 
 h5 {
@@ -32,21 +48,12 @@ h5 {
     height: 7em;
     width: 10em;
 }
-.sidebar {
-    width: 25%;
-    height: 100%;
-    display: block;
-    float: left;
-    border-right-style: groove;
-    align: center;
-}
-.content {
-    margin-left: 75%;
-    height: 100%;
-    display: block;
-    float: right;
-    border-left-style: groove;
-}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
 #lexicon {
     border: groove;
 }

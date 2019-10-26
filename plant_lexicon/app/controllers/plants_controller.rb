@@ -10,6 +10,7 @@ class PlantsController < ApplicationController
   end
 
   def detailed
+    @plants = Plant.all
 
   end
 

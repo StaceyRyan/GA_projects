@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Plant Lexicon</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +9,10 @@
   </head>
 
   <body>
+  <div class="window"
+    <%= render 'layouts/body' %>
     <%= render 'layouts/sidebar' %>
     <%= yield %>
+  </div>
   </body>
 </html>

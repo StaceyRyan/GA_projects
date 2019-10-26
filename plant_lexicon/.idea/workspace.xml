@@ -2,24 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffb6dfef-a385-4546-918f-0a7d65e57cf6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/plants/full.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/plant_lexicon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/plant_lexicon.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/plant.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/plants.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/plant_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/plants_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/plant_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/plants_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/plants_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/plants_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_sidebar.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pages/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/plant/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/create.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/1j/1jw01aStNVg0gsUZREZ9l8Qj7wzhRpIEy0ek_TtOA6U.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/1j/1jw01aStNVg0gsUZREZ9l8Qj7wzhRpIEy0ek_TtOA6U.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Xf/Xf6UmcZS8zzJ8uaev_TI0p6l3eXTj71CxiA3d4LxF3E.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Xf/Xf6UmcZS8zzJ8uaev_TI0p6l3eXTj71CxiA3d4LxF3E.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ms/mst_4weAGSuYVAzfH_IugWEXSLvx5tzoxtsirz-oxvU.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ms/mst_4weAGSuYVAzfH_IugWEXSLvx5tzoxtsirz-oxvU.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/3a/3094fa4a1dd0d5" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/3a/3094fa4a1dd0d5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/55/ab1e461aff51ab" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/55/ab1e461aff51ab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/59/4616357453952b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/59/4616357453952b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c2/c723b14dc81b87" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c2/c723b14dc81b87" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" afterDir="false" />
     </list>
@@ -84,16 +86,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="plant_lexicon" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="plant_lexicon_development: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="plants: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="plant_lexicon" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="postgres: database" type="162271b6:PgImplModel$Database" />
       </path>
       <path>
@@ -138,6 +130,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/users" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -254,17 +251,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6a39fc3c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6a39fc3c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7ada4b6a" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -283,7 +270,9 @@
       <updated>1571568150080</updated>
       <workItem from="1571568155785" duration="11068000" />
       <workItem from="1571736991565" duration="58000" />
-      <workItem from="1571737274116" duration="12192000" />
+      <workItem from="1571737274116" duration="17722000" />
+      <workItem from="1571982563266" duration="77000" />
+      <workItem from="1572041283362" duration="9631000" />
     </task>
     <servers />
   </component>
@@ -304,6 +293,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/plant_lexicon@Development__plant_lexicon.rcov" NAME="Development: plant_lexicon Coverage Results" MODIFIED="1571909124705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="plant_lexicon" />
+    <SUITE FILE_PATH="coverage/plant_lexicon@Development__plant_lexicon.rcov" NAME="Development: plant_lexicon Coverage Results" MODIFIED="1572052256932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="plant_lexicon" />
   </component>
 </project>
