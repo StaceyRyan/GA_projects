@@ -1,18 +1,18 @@
 <!-- sidebar -->
-<div class="sidebar">
-  <div id="map">
-    <h5> Where in the world are you? </h5>
-    <button class="btn"><%= link_to "Register Here", register_path %></button>
-    
-      <!--  <button><%#= link_to("Register", register_new_user_path %>) %></button>-->
-      <!--    <li><%#= link_to("Log Out", login_path, :method => :delete %>) %></li>-->
-      <%= image_tag("/assets/world_map.jpg",  alt: "map", class: "sidebar_image") %>
-    </div>
-  <br>
+  <div class="sidebar">
+    <div id="map">
+      <h5> Where in the world are you? </h5>
+      <button class="btn"><%= link_to "Register Here", register_path %></button>
 
-  <div id="weather">
-    <h5> Weather </h5>
-    <%= image_tag("/assets/weather.jpg",  alt: "weather", class: "sidebar_image") %>
+        <!--  <button><%#= link_to("Register", register_new_user_path %>) %></button>-->
+        <!--    <li><%#= link_to("Log Out", login_path, :method => :delete %>) %></li>-->
+        <%= image_tag("/assets/world_map.jpg",  alt: "map", class: "sidebar_image") %>
+      </div>
+    <br>
+
+    <div id="weather">
+      <h5> Weather </h5>
+      <%= image_tag("/assets/weather.jpg",  alt: "weather", class: "sidebar_image") %>
+    </div>
   </div>
 
-</div>

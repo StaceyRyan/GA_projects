@@ -18040,3 +18040,359 @@ Processing by PlantsController#add as HTML
 Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 6898)
 
 
+Started GET "/users/new" for 127.0.0.1 at 2019-10-26 20:24:17 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/register" for 127.0.0.1 at 2019-10-26 20:24:22 +1100
+Processing by UsersController#register as HTML
+  Rendering users/register.html.erb within layouts/application
+  Rendered users/register.html.erb within layouts/application (Duration: 2.8ms | Allocations: 527)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 86)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 7226)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2019-10-26 20:24:37 +1100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"1Iav5oH/xv5u9yxEGeGpArkLUqlXeifkQnk9iECkT2ppR0GIfJRV6hQBifnI4dvBjjOHyrkWgKaWTXpqMGNS0Q==", "user"=>{"user_name"=>"Fred", "email"=>"staky@ryanweb.id.au", "postcode"=>"3006", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "staky@ryanweb.id.au"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/register
+Completed 302 Found in 315ms (ActiveRecord: 11.3ms | Allocations: 10488)
+
+
+Started GET "/users/register" for 127.0.0.1 at 2019-10-26 20:24:37 +1100
+Processing by UsersController#register as HTML
+  Rendering users/register.html.erb within layouts/application
+  Rendered users/register.html.erb within layouts/application (Duration: 0.6ms | Allocations: 318)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 86)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 6409)
+
+
+Started POST "/users/register" for 127.0.0.1 at 2019-10-26 20:35:28 +1100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"IzZpH2CTuyQvh08jnCw2cSgeiJUuuatPZG+qNhlZa/Oe94dxnfgoMFVx6p5NLESyHyZd9sDVDA2wW+3UaZ52SA==", "user"=>{"user_name"=>"George", "email"=>"george@mail.com", "postcode"=>"3000", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "george@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "postcode", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "George"], ["email", "george@mail.com"], ["postcode", "3000"], ["password_digest", "$2a$12$EiAIg0bHvdRDPuKiK.DfO.9OP4j7/PcfN5M/51bmXrDjA/kSCI5N6"], ["created_at", "2019-10-26 09:35:28.939270"], ["updated_at", "2019-10-26 09:35:28.939270"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 270ms (ActiveRecord: 4.0ms | Allocations: 3822)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-26 20:35:28 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 167)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 86)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 6820)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-26 20:35:29 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 86)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 6596)
+
+
+Started GET "/plants/add_plant" for 127.0.0.1 at 2019-10-26 21:21:51 +1100
+Processing by PlantsController#detailed as HTML
+  Parameters: {"id"=>"add_plant"}
+  Rendering plants/detailed.html.erb within layouts/application
+  [1m[36mPlant Load (6.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/detailed.html.erb:6
+  Rendered plants/detailed.html.erb within layouts/application (Duration: 40.5ms | Allocations: 10219)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 86)
+Completed 200 OK in 62ms (Views: 32.0ms | ActiveRecord: 24.9ms | Allocations: 16990)
+
+
+Started GET "/plants/add_plant" for 127.0.0.1 at 2019-10-26 21:21:54 +1100
+Processing by PlantsController#detailed as HTML
+  Parameters: {"id"=>"add_plant"}
+  Rendering plants/detailed.html.erb within layouts/application
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/detailed.html.erb:6
+  Rendered plants/detailed.html.erb within layouts/application (Duration: 2.7ms | Allocations: 728)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 86)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.1ms | Allocations: 6845)
+
+
+Started GET "/plants/add_plant" for 127.0.0.1 at 2019-10-26 21:22:49 +1100
+Processing by PlantsController#detailed as HTML
+  Parameters: {"id"=>"add_plant"}
+  Rendering plants/detailed.html.erb within layouts/application
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/detailed.html.erb:6
+  Rendered plants/detailed.html.erb within layouts/application (Duration: 38.0ms | Allocations: 9985)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 86)
+Completed 200 OK in 53ms (Views: 25.3ms | ActiveRecord: 25.2ms | Allocations: 16600)
+
+
+Started GET "/plants/add" for 127.0.0.1 at 2019-10-26 21:23:31 +1100
+Processing by PlantsController#add as HTML
+  Rendering plants/add.html.erb within layouts/application
+  Rendered plants/add.html.erb within layouts/application (Duration: 2.7ms | Allocations: 573)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.5ms | Allocations: 86)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 6690)
+
+
+Started POST "/plant/add" for 127.0.0.1 at 2019-10-26 21:24:36 +1100
+Processing by PlantsController#add as HTML
+  Parameters: {"authenticity_token"=>"+AzOBj/S6m86W4Ei9diNjQrt+MPG0xhiRjb3VRqkK5RFzSBowrl5e0CtJJ8k2P9OPdUtoCi/vyCSArC3amM2Lw==", "plant"=>{"classification"=>"Weed", "common_name"=>"Three corner jack", "scientific_name"=>"Spiny emex", "image"=>"nil", "origin"=>"nil", "australian_growing_zone"=>"Warm", "predators"=>"No natives", "palatability"=>"Low", "toxicity"=>"May cause oxalate poisoning.", "control"=>"Shallow cultivation followed by close mowing plus physical removal and burning.", "notes"=>"NIL", "external_link"=>"Agriculture Victoria"}, "commit"=>"Submit"}
+  Rendering plants/add.html.erb within layouts/application
+  Rendered plants/add.html.erb within layouts/application (Duration: 0.9ms | Allocations: 573)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.4ms | Allocations: 86)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 6737)
+
+
+Started GET "/plant/add" for 127.0.0.1 at 2019-10-26 21:29:10 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/plant/add"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/plants/add" for 127.0.0.1 at 2019-10-26 21:29:22 +1100
+Processing by PlantsController#add as HTML
+  Rendering plants/add.html.erb within layouts/application
+  Rendered plants/add.html.erb within layouts/application (Duration: 2.0ms | Allocations: 576)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.6ms | Allocations: 86)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 6892)
+
+
+Started POST "/plant/add" for 127.0.0.1 at 2019-10-26 21:29:36 +1100
+Processing by PlantsController#add as HTML
+  Parameters: {"authenticity_token"=>"WTpemR5KSOAzDs0d9vaJxovXg64B/zrD9dZu23/CMtzk+7D34yHb9En4aKAn9vsFvO9Wze+TnYEh4ik5DwUvZw==", "plant"=>{"classification"=>"Weed", "common_name"=>"Three corner jack", "scientific_name"=>"Spiny emex", "image"=>"", "origin"=>"", "australian_growing_zone"=>"", "predators"=>"", "palatability"=>"", "toxicity"=>"", "control"=>"", "notes"=>"", "external_link"=>""}, "commit"=>"Submit"}
+  Rendering plants/add.html.erb within layouts/application
+  Rendered plants/add.html.erb within layouts/application (Duration: 1.3ms | Allocations: 573)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.1ms | Allocations: 86)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 6735)
+
+
+Started POST "/plant/add" for 127.0.0.1 at 2019-10-26 21:30:30 +1100
+Processing by PlantsController#add as HTML
+  Parameters: {"authenticity_token"=>"+/gQ34pArOuHsF7dI0dNBOI+X2COBtLypWJKOYmaRupGOf6xdys///1G+2DyRz/H1QaKA2BqdbBxVg3b+V1bUQ==", "plant"=>{"classification"=>"Weed", "common_name"=>"Three corner jack", "scientific_name"=>"Spiny emex", "image"=>"url", "origin"=>"unknown", "australian_growing_zone"=>"Warm", "predators"=>"No natives", "palatability"=>"Low", "toxicity"=>"Potential for oxalate poisoning", "control"=>"Shallow cultivation followed by close mowing plus physical removal and burning.", "notes"=>"Nil", "external_link"=>"nil"}, "commit"=>"Submit"}
+  Rendering plants/add.html.erb within layouts/application
+  Rendered plants/add.html.erb within layouts/application (Duration: 1.2ms | Allocations: 573)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 86)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 6741)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2019-10-26 21:31:29 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/pages/index"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/home" for 127.0.0.1 at 2019-10-26 21:31:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pages/index" for 127.0.0.1 at 2019-10-26 21:32:11 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.2ms | Allocations: 86)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 6288)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-26 21:32:11 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.6ms | Allocations: 86)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 6112)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2019-10-26 21:34:09 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 167)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 84)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.5ms | Allocations: 281)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 7908)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-26 21:34:09 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 86)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 6111)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2019-10-26 21:37:10 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 182)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 84)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.8ms | Allocations: 276)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 7921)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-26 21:37:10 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 86)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 6121)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2019-10-26 21:40:33 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 167)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 84)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.8ms | Allocations: 274)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.0ms | Allocations: 7899)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-26 21:40:33 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_sidebar.html.erb (Duration: 0.3ms | Allocations: 86)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 7254)
+
+
