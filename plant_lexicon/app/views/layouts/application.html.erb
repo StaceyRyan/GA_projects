@@ -9,8 +9,14 @@
   </head>
 
   <body>
+  <% if @current_user %>
+    Signed in as <%= @current_user.user_name %> | <%= link_to "Logout", logout_path %>
+  <% else %>
+    <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+  <% end %>
+
   <div class="window"
-    <%= render 'layouts/body' %>
+    <%= render 'layouts/header' %>
     <%= render 'layouts/sidebar' %>
     <%= yield %>
   </div>

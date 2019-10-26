@@ -1,6 +1,5 @@
 class PlantsController < ApplicationController
   def index
-    @header = 'Plant Lexicon'
     @plants_all = Plant.all
   end
 
@@ -14,7 +13,7 @@ class PlantsController < ApplicationController
 
   end
 
-  def new
+  def add
 
   end
 

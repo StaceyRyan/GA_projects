@@ -1,18 +1,14 @@
 class ApplicationController < ActionController::Base
 
-  #Call the fetch_user method before an action is performed
-  # before_action :fetch_user
+  protect_from_forgery with: :exception
 
-  private
-  def fetch_user
-    if session[:user_id].present?
-      @current_user = User.find_by :id => session[:user_id]
-
-      session[:user_id] = nil unless @current_user
-    end
+  def current_user
+    # @current_user = User.find(session[:user_id])
   end
 
-  def authorize_user
-    redirect_to home_path unless @current_user.present?
+  helper_method :current_user
+
+  def authorize
+    redirect_to home_path unless current_user
   end
 end

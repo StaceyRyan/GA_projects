@@ -12,9 +12,10 @@
 <!-- page content -->
 <div class="content">
 </div>
-<h1>Welcome to the Plant Lexicon </h1>
 <h3>You are logged into the basic table</h3>
 <p>Click on a plant name to go to a detailed view of that plant</p>
+<p>Click <button class="btn"><%= link_to "Add Plant", addplant_path %></button> to add a new plant to the lexicon</p>
+
 
 <table id="lexicon">
     <% @plants.each do |plant| %>

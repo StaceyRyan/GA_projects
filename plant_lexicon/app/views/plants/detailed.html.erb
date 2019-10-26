@@ -1,6 +1,5 @@
 <div class="content">
 </div>
-<h1>Welcome to the Plant Lexicon </h1>
 <p>You are logged into the detailed view</p>
 
 
@@ -10,12 +9,12 @@
   <div><p> This plant grows best in the Australian growing zone <%= plant.australian_growing_zone %>.</p>
   <p>It is considered to be <%= plant.classification %> but will suffer from predation by <%= plant.predators %> </p>
   </div>
-  <div>
-    <img src='/assets/<%= plant.image %>'/>
-  </div>
   <div><p> Toxicity: <%= plant.toxicity %></p></div>
   <div><p> Palatability: <%= plant.toxicity %></p></div>
   <div><h4> Further notes: <%= plant.toxicity %></h4></div>
+  <div>
+    <img src='/assets/<%= plant.image %>'/>
+  </div>
 
 <% end %>
 </table>

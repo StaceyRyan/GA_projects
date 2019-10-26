@@ -1,0 +1,12 @@
+<h1>Add New Plant</h1>
+
+<%= form_with(url: add_plant_path, method: "post") do %>
+  <label>
+    <input type="text" name="plant_common_name" autofocus>
+  </label>
+  <label>
+    <input type="text" name="plant_image" placeholder="http://...">
+  </label>
+  <button>Add Plant</button>
+
+<% end %>
