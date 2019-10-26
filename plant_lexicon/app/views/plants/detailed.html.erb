@@ -4,17 +4,18 @@
 
 
 <% @plants.each do |plant| %>
-  <div> <h3><%= plant.common_name %><h4> <h4><%= plant.scientific_name %></h4>
-  </div>
+  <div> <h3><%= plant.common_name %><h4> <h4><%= plant.scientific_name %></h4> </div>
+
   <div><p> This plant grows best in the Australian growing zone <%= plant.australian_growing_zone %>.</p>
   <p>It is considered to be <%= plant.classification %> but will suffer from predation by <%= plant.predators %> </p>
   </div>
+
   <div><p> Toxicity: <%= plant.toxicity %></p></div>
+
   <div><p> Palatability: <%= plant.toxicity %></p></div>
+
   <div><h4> Further notes: <%= plant.toxicity %></h4></div>
-  <div>
-    <img src='/assets/<%= plant.image %>'/>
-  </div>
+
+  <div><img src='/assets/<%= plant.image %>'/></div>
 
 <% end %>
-</table>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # To restrict which actions are mapped, use only.
   # resources :sessions, only: [:add, :create, :destroy]
 
-  get 'pages/index', as: 'basic_view'
+  # get 'pages/index', as: 'basic_view'
 
   get 'users/register' => 'users#register', :as => 'register'
   post 'users/register' => 'users#create', :as => 'create'
@@ -18,9 +18,10 @@ Rails.application.routes.draw do
 
 
   get 'plants/full' => 'plants#full', :as => 'loggedin_index'
+  get 'plants/add' => 'plants#add', :as => 'add'
+
   get 'plants/:id' => 'plants#detailed', :as => 'loggedin_detailed'
 
-  get 'plants/add' => 'plants#add', :as => 'add'
   post 'plants/new_plant' => 'plants#add', :as => 'new_plant'
 
 end

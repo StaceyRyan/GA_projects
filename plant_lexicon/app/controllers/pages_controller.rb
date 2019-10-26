@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_action :authorize
+  # before_action :authorize
 
   def index
     # @header = 'Plant Lexicon'
