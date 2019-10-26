@@ -1,12 +1,18 @@
 <h1>Add New Plant</h1>
 
-<%= form_with(url: add_path, method: "post") do %>
-  <label>
-    <input type="text" name="plant_common_name" autofocus>
-  </label>
-  <label>
-    <input type="text" name="plant_image" placeholder="http://...">
-  </label>
-  <button>Add Plant</button>
+<%= form_for :plant, url: '/plant/add' do |f| %>
 
+  Classification: <%= f.text_field :classification %>
+  Common Name: <%= f.text_field :common_name %>
+  Scientific Name: <%= f.text_field :scientific_name %>
+  Image: <%= f.text_field :image %>
+  Origin: <%= f.text_field :origin %>
+  Australian Growing Zone: <%= f.text_field :australian_growing_zone %>
+  Predators: <%= f.text_field :predators %>
+  Palatability: <%= f.text_field :palatability %>
+  Toxicity: <%= f.text_field :toxicity %>
+  Control: <%= f.text_field :control %>
+  Notes: <%= f.text_field :notes %>
+  Useful Link: <%= f.text_field :external_link %>
+  <%= f.submit "Submit" %>
 <% end %>
