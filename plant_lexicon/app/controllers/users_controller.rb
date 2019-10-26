@@ -9,12 +9,12 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      redirect_to '/register'
+      redirect_to '/users/register'
     end
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:user_name, :email, :postcode, :password, :password_confirmation)
   end
 
 end
