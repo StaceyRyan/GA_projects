@@ -18,11 +18,11 @@ Rails.application.routes.draw do
 
 
   get 'plants/full' => 'plants#full', :as => 'loggedin_index'
-  get 'plants/add' => 'plants#add', :as => 'add'
+  get 'plants/add' => 'plants#add', :as => 'add_plant'
 
   get 'plants/:id' => 'plants#detailed', :as => 'loggedin_detailed'
 
-  post 'plant/add' => 'plants#add', :as => 'new_plant'
+  post 'plants/create' => 'plants#create', :as => 'create_plant'
   #Needs to redirect back to loggedin_index
 
 end

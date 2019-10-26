@@ -15,10 +15,13 @@
     <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
   <% end %>
 
+  <%= render 'layouts/header' %>
+
   <div class="window">
-    <%= render 'layouts/header' %>
     <%= render 'layouts/sidebar' %>
+    <div class="content">
     <%= yield %>
+    </div>
   </div>
   </body>
 </html>

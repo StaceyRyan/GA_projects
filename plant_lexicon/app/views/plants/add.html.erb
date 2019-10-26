@@ -1,18 +1,42 @@
 <h1>Add New Plant</h1>
 
-<%= form_for :plant, url: '/plant/add' do |f| %>
+<%= form_with(url: create_plant_path, method: "post") do %>
+  <label>
+    <input type="text" name="classification" placeholder="Edible, Weed, Ornamental" autofocus>
+  </label>
+  <label>
+    <input type="text" name="common_name" placeholder="Common Name">
+  </label>
+  <label>
+    <input type="text" name="scientific_name" placeholder="Scientific Name">
+  </label>
+  <label>
+    <input type="text" name="image" placeholder="Image URL">
+  </label>
+  <label>
+    <input type="text" name="origin" placeholder="Origin">
+  </label>
+  <label>
+    <input type="text" name="australian_growing_zone" placeholder="Aus Growing Zone">
+  </label>
+  <label>
+    <input type="text" name="predators" placeholder="Predators">
+  </label>
+  <label>
+    <input type="text" name="palatability" placeholder="Palatability">
+  </label>
+  <label>
+    <input type="text" name="toxicity" placeholder="Toxicity">
+  </label>
+  <label>
+    <input type="text" name="control" placeholder="Control">
+  </label>
+  <label>
+    <input type="text" name="notes" placeholder="Notes">
+  </label>
+  <label>
+    <input type="text" name="external_link" placeholder="External Links">
+  </label>
+  <button>Add Plant</button>
 
-  Classification: <%= f.text_field :classification %>
-  Common Name: <%= f.text_field :common_name %>
-  Scientific Name: <%= f.text_field :scientific_name %>
-  Image: <%= f.text_field :image %>
-  Origin: <%= f.text_field :origin %>
-  Australian Growing Zone: <%= f.text_field :australian_growing_zone %>
-  Predators: <%= f.text_field :predators %>
-  Palatability: <%= f.text_field :palatability %>
-  Toxicity: <%= f.text_field :toxicity %>
-  Control: <%= f.text_field :control %>
-  Notes: <%= f.text_field :notes %>
-  Useful Link: <%= f.text_field :external_link %>
-  <%= f.submit "Submit" %>
 <% end %>
