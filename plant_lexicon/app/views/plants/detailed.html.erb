@@ -2,20 +2,20 @@
 </div>
 <p>You are logged into the detailed view</p>
 
+<% @plants.common_name %>
+  <div> <h3><%= @plants.common_name %><h4> <h4><%= @plants.scientific_name %></h4> </div>
 
-<% @plants.each do |plant| %>
-  <div> <h3><%= plant.common_name %><h4> <h4><%= plant.scientific_name %></h4> </div>
-
-  <div><p> This plant grows best in the Australian growing zone <%= plant.australian_growing_zone %>.</p>
-  <p>It is considered to be <%= plant.classification %> but will suffer from predation by <%= plant.predators %> </p>
+  <div><p> This plant grows best in the Australian growing zone <%= @plants.australian_growing_zone %>.</p>
+  <p>It is considered to be <%= @plants.classification %> but will suffer from predation by <%= @plants.predators %> </p>
   </div>
 
-  <div><p> Toxicity: <%= plant.toxicity %></p></div>
+  <div><p> Toxicity: <%= @plants.toxicity %></p></div>
 
-  <div><p> Palatability: <%= plant.toxicity %></p></div>
+  <div><p> Palatability: <%= @plants.toxicity %></p></div>
 
-  <div><h4> Further notes: <%= plant.toxicity %></h4></div>
+  <div><h4> Further notes: <%= @plants.toxicity %></h4></div>
 
-  <div><img src='/assets/<%= plant.image %>'/></div>
+  <div><img class="content-image" src=<%= @plants.image %>/></div>
+<!--  <div><img class="content-image" src=<%#= @plants.image %>/></div>-->
 
-<% end %>
+<!--Line 19 to be updated to seedpod image-->

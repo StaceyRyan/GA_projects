@@ -1,4 +1,11 @@
 
 <div class="window">
   <h1>Welcome to the Plant Lexicon </h1>
+  <% if @current_user %>
+    Signed in as <%= @current_user.user_name %><button class="btn"><%= link_to "Logout", logout_path %></button><button class="btn"><%= link_to "Add Plant", add_plant_path %></button>
+  <% else %>
+   <button class="btn"> <%= link_to 'Login', login_path %></button> <button class="btn"><%= link_to "Register Here", register_path %></button>
+  <% end %>
+
+
 </div>

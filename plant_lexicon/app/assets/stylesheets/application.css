@@ -53,5 +53,8 @@ h5 {
 
 .btn {
     opacity: .75;
-    position: absolute;
+    position: relative;
+    height: 2em;
+    width: 12em;
+    border-radius: 25px;
 }

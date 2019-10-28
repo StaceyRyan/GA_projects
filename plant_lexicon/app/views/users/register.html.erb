@@ -2,11 +2,28 @@
 <h3>Enter your details below to create a new account.</h3>
 
 <%= form_for :user, url: '/users/register' do |f| %>
-
-  Name: <%= f.text_field :user_name %>
-  Email: <%= f.text_field :email %>
-  Postcode: <%= f.text_field :postcode %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <table>
+    <tr>
+      <th>
+        Name: <%= f.text_field :user_name %>
+      </th>
+      <th>
+        Email: <%= f.text_field :email %>
+      </th>
+      <th>
+        Postcode: <%= f.text_field :postcode %>
+      </th>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>
+        Password: <%= f.password_field :password %>
+      </th>
+      <th>
+        Password Confirmation: <%= f.password_field :password_confirmation %>
+      </th>
+    </tr>
+  </table>
   <%= f.submit "Submit" %>
 <% end %>

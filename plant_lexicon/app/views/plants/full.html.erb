@@ -12,20 +12,28 @@
 <!-- page content -->
 <div class="content">
 </div>
-<h3>You are logged into the basic table</h3>
+<h3>You are logged into the basic view</h3>
 <p>Click on a plant name to go to a detailed view of that plant</p>
-<p>Click <button class="btn"><%= link_to "Add Plant", add_plant_path %></button> to add a new plant to the lexicon</p>
 
 
 <table id="lexicon">
+  <tr class="label-row">
+    <th><h4>Plant Name</h4></th>
+    <th><h4>Fully Grown Plant</h4></th>
+    <th><h4>Seed Pod</h4></th>
+
+  </tr>
     <% @plants.each do |plant| %>
     <tr>
       <th>
-        <%= plant.common_name %>
-        <%= link_to 'link', loggedin_detailed_path(plant[:id]) %>
+        <%= link_to plant.common_name, loggedin_detailed_path(plant[:id]) %>
       </th>
       <th>
-        <img src='/assets/<%= plant.image %>'/>
+        <img class='content-image' src=<%= plant.image %>/>
+      </th>
+      <th>
+        <img class='content-image' src=<%= plant.image %>/>
+<!--        To add image of seedpod here-->
       </th>
   </tr>
   <% end %>

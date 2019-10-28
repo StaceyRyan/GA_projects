@@ -8,7 +8,7 @@ class PlantsController < ApplicationController
   end
 
   def detailed
-    @plants = Plant.all
+    @plants = Plant.find(params[:id])
 
   end
 

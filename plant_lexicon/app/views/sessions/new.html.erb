@@ -1,9 +1,24 @@
 
 <h4>Login</h4>
 
-<%= form_tag login_path do %>
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
+<%= form_tag sessions_path do %>
+  <table>
+    <tr>
+      <th>
+        Email:
+      </th>
+      <th>
+        <%= text_field_tag :email %>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        Password:
+      </th>
+      <th>
+        <%= password_field_tag :password %>
+      </th>
+    </tr>
+  </table>
   <%= submit_tag "Submit" %>
-
 <% end %>

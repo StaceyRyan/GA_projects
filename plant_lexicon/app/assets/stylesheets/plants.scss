@@ -1,3 +1,17 @@
 // Place all the styles related to the Plant controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  border: 1px solid #a9c9c2;
+}
+th {
+  border: 1px solid #a9c9c2;
+}
+.label-row{
+  background-color: #81c7b8;
+  opacity: .75;
+}
+.content-image{
+  width: 10em;
+  height: 10em;
+}
