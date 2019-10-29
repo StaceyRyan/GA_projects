@@ -1,0 +1,27 @@
+<body>
+
+<!-- page content -->
+<div class="content">
+</div>
+<h3>You are in basic view</h3>
+<h5>Login to access the full view</h5>
+
+<table>
+
+  <tr class="label-row">
+    <th>Common Name</th>
+    <th>Seedpod</th>
+  </tr>
+  <% @plants.each do |plant| %>
+    <tr>
+    <th>
+      <%= plant.common_name %>
+    </th>
+    <th>
+      <img class='content-image' src=<%= plant.image_seedpod %>/>
+    </th>
+  </tr>
+  <% end %>
+</table>
+</body>
+</html>

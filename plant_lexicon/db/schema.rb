@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_20_104951) do
+ActiveRecord::Schema.define(version: 2019_10_28_095129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_10_20_104951) do
     t.string "classification"
     t.string "common_name"
     t.string "scientific_name"
-    t.string "image"
+    t.string "image_mature"
     t.string "origin"
     t.string "australian_growing_zone"
     t.string "predators"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_10_20_104951) do
     t.string "external_link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image_seedpod"
   end
 
   create_table "postcode_zones", force: :cascade do |t|

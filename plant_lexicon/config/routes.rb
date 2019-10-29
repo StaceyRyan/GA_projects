@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # To restrict which actions are mapped, use only.
   resources :sessions, only: [:new, :create, :destroy]
 
-  get 'pages/index', as: 'basic_view'
+  get 'users/index', as: 'basic_view'
 
   get 'users/register' => 'users#register', :as => 'register'
   post 'users/register' => 'users#create', :as => 'create'

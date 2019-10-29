@@ -29,11 +29,10 @@
         <%= link_to plant.common_name, loggedin_detailed_path(plant[:id]) %>
       </th>
       <th>
-        <img class='content-image' src=<%= plant.image %>/>
+        <img class='content-image' src=<%= plant.image_mature %>/>
       </th>
       <th>
-        <img class='content-image' src=<%= plant.image %>/>
-<!--        To add image of seedpod here-->
+        <img class='content-image' src=<%= plant.image_seedpod %>/>
       </th>
   </tr>
   <% end %>

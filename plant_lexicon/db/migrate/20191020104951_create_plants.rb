@@ -4,8 +4,7 @@ class CreatePlants < ActiveRecord::Migration[6.0]
       t.string :classification
       t.string :common_name
       t.string :scientific_name
-      t.string :image_foliage
-      t.string :image_seedpod
+      t.string :image
       t.string :origin
       t.string :australian_growing_zone
       t.string :predators
