@@ -1,13 +1,18 @@
 <!-- sidebar -->
   <div class="sidebar">
-    <div id="map">
-      <h5> Where in the world are you? </h5>
-        <%= image_tag("/assets/world_map.jpg",  alt: "map", class: "sidebar_image") %>
-      </div>
-    <br>
+<!--    <div id="map">-->
+<!--      <h5> Where in the world are you? </h5>-->
+        <%#= image_tag("/assets/world_map.jpg",  alt: "map", class: "sidebar_image") %>
+<!--      </div>-->
+<!--    <br>-->
 
     <div id="weather">
       <h5> Weather </h5>
+      <% if current_user %>
+        Your local weather is <%= @forecast %>
+      <% else %>
+        Register or login to check your local weather.
+      <% end %>
       <%= image_tag("/assets/weather.jpg",  alt: "weather", class: "sidebar_image") %>
     </div>
   </div>

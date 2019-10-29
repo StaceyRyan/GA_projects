@@ -24,5 +24,7 @@ Rails.application.routes.draw do
 
   post 'plants/create' => 'plants#create', :as => 'create_plant'
   #Needs to redirect back to loggedin_index
+  #
+  get 'weather/index' => 'weather#retrieve', :as => 'forecast'
 
 end

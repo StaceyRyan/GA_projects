@@ -15,5 +15,7 @@
 
   <div><h4> Further notes: <%= @plants.toxicity %></h4></div>
 
-  <div><img class="content-image" src=<%= @plants.image_mature %>/></div>
-  <div><img class="content-image" src=<%= @plants.image_seedpod %>/></div>
+<div id="images">
+  <div id="mature"><img class="content-image" src=<%= @plants.image_mature %>/></div>
+  <div id="seeds"><img class="content-image" src=<%= @plants.image_seedpod %>/></div>
+</div>

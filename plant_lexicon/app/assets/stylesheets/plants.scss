@@ -15,3 +15,13 @@ th {
   width: 10em;
   height: 10em;
 }
+#images{
+  display: flex;
+  flex-direction: row;
+}
+#mature{
+  flex: 1;
+}
+#seeds{
+  flex: 2;
+}
