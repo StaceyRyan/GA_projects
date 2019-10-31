@@ -21,7 +21,8 @@ class PlantsController < ApplicationController
     p1.classification = params[:classification]
     p1.common_name = params[:common_name]
     p1.scientific_name = params[:scientific_name]
-    p1.image = params[:image]
+    p1.image_mature = params[:image_mature]
+    p1.image_seedpod = params[:image_seedpod]
     p1.origin = params[:origin]
     p1.australian_growing_zone = params[:australian_growing_zone]
     p1.predators = params[:predators]
@@ -32,10 +33,6 @@ class PlantsController < ApplicationController
     p1.external_link = params[:external_link]
     p1.save
     redirect_to loggedin_index_path
-  end
-
-  def add
-    # @plant = Plant.find params[:id]
   end
 
   def plant_params

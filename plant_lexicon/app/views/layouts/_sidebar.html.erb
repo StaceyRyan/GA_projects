@@ -9,9 +9,9 @@
     <div id="weather">
       <h5> Weather </h5>
       <% if current_user %>
-        Your local weather is <%= @forecast %>
+        The weather for your location is: <%= weather if weather %>
       <% else %>
-        Register or login to check your local weather.
+        Register or login to view your local weather.
       <% end %>
       <%= image_tag("/assets/weather.jpg",  alt: "weather", class: "sidebar_image") %>
     </div>

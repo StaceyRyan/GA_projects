@@ -10,6 +10,7 @@
 
   <tr class="label-row">
     <th>Common Name</th>
+    <th>Classification</th>
     <th>Seedpod</th>
   </tr>
   <% @plants.each do |plant| %>
@@ -17,6 +18,9 @@
     <th>
       <%= plant.common_name %>
     </th>
+      <th>
+        <%= plant.classification %>
+      </th>
     <th>
       <img class='content-image' src=<%= plant.image_seedpod %>/>
     </th>
