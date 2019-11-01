@@ -58,3 +58,8 @@ h5 {
     width: 12em;
     border-radius: 25px;
 }
+#weather {
+    font-family: Sans-Serif;
+    font-style: italic;
+    color: #187a80;
+}

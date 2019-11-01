@@ -1,54 +1,106 @@
 <div class="edit">
 </div>
-<p>You are on the edit page</p>
+<h4>You are on the edit page</h4>
 
-<%= form_with model: @plants, method: 'post', url: update_plant_path, class: "Plant" do |f| %>
-  <%= f.label :common_name %>
-  <%= f.text_field :common_name, placeholder: @plant.common_name %>
+<table id="editing">
+  <tr class="label-row">
+    <th><h4>Column Name</h4></th>
+    <th><h4>Data to Edit</h4></th>
+  </tr>
+  <%= form_with model: @plants, method: 'post', url: update_plant_path, class: "Plant" do |f| %>
+    <tr>
+      <th><%= f.label :common_name %></th>
+      <th> <%= f.text_field :common_name, placeholder: @plant.common_name %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :scientific_name %></th>
+      <th><%= f.text_field :scientific_name, placeholder: @plant.scientific_name %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :image_mature %></th>
+      <th><%= f.text_field :image_mature, placeholder: @plant.image_mature %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :image_seedpod %></th>
+      <th><%= f.text_field :image_seedpod, placeholder: @plant.image_seedpod %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :origin %></th>
+      <th><%= f.text_field :origin, placeholder: @plant.origin %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :australian_growing_zone %></th>
+      <th><%= f.text_field :australian_growing_zone, placeholder: @plant.australian_growing_zone %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :predators %></th>
+      <th><%= f.text_field :predators, placeholder: @plant.predators %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :palatability %></th>
+      <th><%= f.text_field :palatability, placeholder: @plant.palatability %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :toxicity %></th>
+      <th><%= f.text_field :toxicity, placeholder: @plant.toxicity %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :control %></th>
+      <th><%= f.text_field :control, placeholder: @plant.control %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :notes %></th>
+      <th><%= f.text_field :notes, placeholder: @plant.notes %></th>
+    </tr>
+    <tr>
+      <th><%= f.label :external_link %></th>
+      <th><%= f.text_field :external_link, placeholder: @plant.external_link %></th>
+    </tr>
+    </table>
 
-  <%= f.submit "Edit" %>
-<% end %>
+    <%= f.submit "Edit" %>
+  <% end %>
 
 <%#= form_with(url: edit_path, method: "post") do %>
-<!--  <label>-->
-<!--    <input type="text" name="classification" placeholder="Edible, Weed, Ornamental" autofocus>-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="common_name" placeholder="Common Name">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="scientific_name" placeholder="Scientific Name">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="image_mature" placeholder="URL of mature plant">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="image-seedpod" placeholder="URL of seedpod image">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="origin" placeholder="Origin">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="australian_growing_zone" placeholder="Aus Growing Zone">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="predators" placeholder="Predators">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="palatability" placeholder="Palatability">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="toxicity" placeholder="Toxicity">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="control" placeholder="Control">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="notes" placeholder="Notes">-->
-<!--  </label>-->
-<!--  <label>-->
-<!--    <input type="text" name="external_link" placeholder="External Links">-->
-<!--  </label>-->
-<!--  <button>Edit Plant</button>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="classification" placeholder="Edible, Weed, Ornamental" autofocus>-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="common_name" placeholder="Common Name">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="scientific_name" placeholder="Scientific Name">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="image_mature" placeholder="URL of mature plant">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="image-seedpod" placeholder="URL of seedpod image">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="origin" placeholder="Origin">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="australian_growing_zone" placeholder="Aus Growing Zone">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="predators" placeholder="Predators">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="palatability" placeholder="Palatability">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="toxicity" placeholder="Toxicity">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="control" placeholder="Control">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="notes" placeholder="Notes">-->
+  <!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" name="external_link" placeholder="External Links">-->
+  <!--  </label>-->
+  <!--  <button>Edit Plant</button>-->
 
 <%# end %>

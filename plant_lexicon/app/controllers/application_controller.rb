@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   def weather
     if session[:user_id]
       user = User.find(session[:user_id])
-      weather = HTTParty.get("https://api.openweathermap.org/data/2.5/weather?q=#{user[:postcode]},au&APPID=88c9c78962c8f55c3cec2717c3aadf1b&units=metric");
+      weather = HTTParty.get("https://api.openweathermap.org/data/2.5/weather?q=#{user[:postcode]},au&APPID=#{ENV['APIKEY']}&units=metric");
       resHash = JSON.parse(weather.body)
       sky = resHash['weather'][0]['main']
       temperature = resHash['main']['temp']
