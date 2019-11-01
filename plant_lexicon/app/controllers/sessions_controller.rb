@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to loggedin_index_path
     else
-      redirect_to basic_view_path
+      redirect_to alert_path
     end
   end
 

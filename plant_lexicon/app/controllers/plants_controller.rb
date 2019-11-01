@@ -9,7 +9,6 @@ class PlantsController < ApplicationController
 
   def detailed
     @plants = Plant.find(params[:id])
-
   end
 
   def add
@@ -39,4 +38,14 @@ class PlantsController < ApplicationController
     params.require(:plant).permit(:classification, :common_name, :postcode, :scientific_name, :image, :origin, :australian_growing_zone, :predators, :palatability, :toxicity, :control, :notes, :external_link)
   end
 
+  def edit
+    @plant = Plant.find(params[:id])
+  end
+
+  def update
+    plant = Plant.find(params[:id])
+    plant.common_name = params[:common_name] if params[:common_name]
+    plant.save
+    redirect_to loggedin_index_path
+  end
 end

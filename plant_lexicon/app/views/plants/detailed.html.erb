@@ -1,6 +1,7 @@
 <div class="content">
 </div>
 <p>You are logged into the detailed view</p>
+<button class="btn" id="edit"><%= link_to "Edit Plant", edit_path(@plants[:id]) %></button>
 
 <% @plants.common_name %>
   <div> <h3><%= @plants.common_name %><h4> <h4><%= @plants.scientific_name %></h4> </div>
