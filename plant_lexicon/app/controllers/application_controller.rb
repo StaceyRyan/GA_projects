@@ -16,7 +16,11 @@ class ApplicationController < ActionController::Base
       user = User.find(session[:user_id])
       weather = HTTParty.get("https://api.openweathermap.org/data/2.5/weather?q=#{user[:postcode]},au&APPID=88c9c78962c8f55c3cec2717c3aadf1b&units=metric");
       resHash = JSON.parse(weather.body)
-      resHash['weather'][0]['main']
+      sky = resHash['weather'][0]['main']
+      temperature = resHash['main']['temp']
+      max_t = resHash['main']['temp_max']
+      min_t = resHash['main']['temp_min']
+      {sky: sky, temperature: temperature, min_t: min_t, max_t: max_t}
     end
   end
   helper_method :weather

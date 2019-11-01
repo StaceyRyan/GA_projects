@@ -9,11 +9,14 @@
     <div id="weather">
       <h5> Weather </h5>
       <% if current_user %>
-        The weather for your location is: <%= weather if weather %>
-      <% else %>
+       <p>Current: <%= weather[:temperature] if weather %> degrees Celsius with <%= weather[:sky] if weather %>.</p>
+        <p>The forecast temperature range for today is between
+          <%= weather[:min_t] if weather %> and
+        <%= weather[:max_t] if weather %> degrees Celsius.</p>
+    <% else %>
         Register or login to view your local weather.
-      <% end %>
-      <%= image_tag("/assets/weather.jpg",  alt: "weather", class: "sidebar_image") %>
+        <%= image_tag("/assets/weather.jpg",  alt: "weather", class: "sidebar_image") %>
+    <% end %>
     </div>
   </div>
 

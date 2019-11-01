@@ -9,6 +9,7 @@ class PlantsController < ApplicationController
 
   def detailed
     @plants = Plant.find(params[:id])
+    @permission = Permission.find_by_user_id(session[:user_id])
   end
 
   def add

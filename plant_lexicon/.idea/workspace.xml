@@ -3,18 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ffb6dfef-a385-4546-918f-0a7d65e57cf6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/plants.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/plants.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/plants_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/plants_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/plants/add.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/plants/add.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_sidebar.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/plants/detailed.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/plants/detailed.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Uj/UjHXB2G5a90EAM__vG_tj1tBZtzyowhK3MDUWYRHilM.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Uj/UjHXB2G5a90EAM__vG_tj1tBZtzyowhK3MDUWYRHilM.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XO/XOKazw-TmUpsJ-qIFHejogrkLz2jH78-TACjNm1lkz8.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XO/XOKazw-TmUpsJ-qIFHejogrkLz2jH78-TACjNm1lkz8.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/19/333ccd02ca528d" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/19/333ccd02ca528d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/55/ab1e461aff51ab" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/55/ab1e461aff51ab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/bc/587cf2ab8b602c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/bc/587cf2ab8b602c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/59/4616357453952b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/59/4616357453952b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c2/c723b14dc81b87" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c2/c723b14dc81b87" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" afterDir="false" />
@@ -81,10 +77,7 @@
         <item name="plant_lexicon" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="plant_lexicon_development: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="plants: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="access methods" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -294,7 +287,7 @@
       <workItem from="1572126444403" duration="1085000" />
       <workItem from="1572127691972" duration="8118000" />
       <workItem from="1572236890258" duration="37641000" />
-      <workItem from="1572602580750" duration="196000" />
+      <workItem from="1572602580750" duration="4518000" />
     </task>
     <servers />
   </component>
@@ -334,6 +327,6 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/plant_lexicon@Development__plant_lexicon.rcov" NAME="Development: plant_lexicon Coverage Results" MODIFIED="1572602582837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="plant_lexicon" />
+    <SUITE FILE_PATH="coverage/plant_lexicon@Development__plant_lexicon.rcov" NAME="Development: plant_lexicon Coverage Results" MODIFIED="1572606918079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="plant_lexicon" />
   </component>
 </project>
