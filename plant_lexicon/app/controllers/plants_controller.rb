@@ -45,7 +45,19 @@ class PlantsController < ApplicationController
 
   def update
     plant = Plant.find(params[:id])
+    plant.classification = params[:classification] if params[:classification]
     plant.common_name = params[:common_name] if params[:common_name]
+    plant.scientific_name = params[:scientific_name] if params[:scientific_name]
+    plant.image_mature = params[:image_mature] if params[:image_mature]
+    plant.image_seedpod = params[:image_seedpod] if params[:image_seedpod]
+    plant.origin = params[:origin] if params[:origin]
+    plant.australian_growing_zone = params[:australian_growing_zone] if params[:australian_growing_zone]
+    plant.predators = params[:predators] if params[:predators]
+    plant.palatability = params[:palatability] if params[:palatability]
+    plant.toxicity = params[:toxicity] if params[:toxicity]
+    plant.control = params[:control] if params[:control]
+    plant.notes = params[:notes] if params[:notes]
+    plant.external_link = params[:external_link] if params[:external_link]
     plant.save
     redirect_to loggedin_index_path
   end
