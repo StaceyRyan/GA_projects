@@ -1,0 +1,11 @@
+<h1>Deregister Here</h1>
+
+<%= form_with model: @u1, method: 'post', url: deregister_path, class: "User" do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: current_user.email %>
+
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+
+  <%= f.submit "Deregister" %>
+<% end %>

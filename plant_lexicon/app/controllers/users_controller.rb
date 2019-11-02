@@ -21,4 +21,14 @@ class UsersController < ApplicationController
     params.require(:user).permit(:user_name, :email, :postcode, :password, :password_confirmation)
   end
 
+  def deregister
+
+  end
+
+  def destroy
+    @u1 = User.find(session[:user_id])
+    @u1.destroy
+    session[:user_id] = nil
+    redirect_to register_path
+  end
 end

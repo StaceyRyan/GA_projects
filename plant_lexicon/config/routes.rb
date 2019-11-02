@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get 'users/register' => 'users#register', :as => 'register'
   post 'users/register' => 'users#create', :as => 'create'
 
+  get 'users/deregister' => 'users#deregister', as: 'deregister_form'
+  post 'users/deregister' => 'users#destroy', :as => 'deregister'
+
+
   get 'users/login' => 'sessions#new', :as => 'login'
   get 'users/alert', as: 'alert'
   post 'users/login' => 'sessions#create', :as => 'active'

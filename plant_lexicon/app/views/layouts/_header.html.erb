@@ -4,7 +4,10 @@
     <button class="btn"><%= link_to "Add Plant", add_plant_path %></button>
     <button class="btn"> <%= link_to 'Full List', loggedin_index_path %>
       <button class="btn"><%= link_to "Logout", logout_path %></button>
-  <% else %>
+      <button class="btn"><%= link_to "De-register", deregister_path %></button>
+
+
+<% else %>
     <h1>Welcome to the Plant Lexicon </h1>
     <button class="btn"> <%= link_to 'Home', basic_view_path %>
       <button class="btn"><%= link_to "Register Here", register_path %></button>
