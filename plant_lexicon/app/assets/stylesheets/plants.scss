@@ -15,6 +15,13 @@ th {
   width: 10em;
   height: 10em;
 }
+#greeting {
+  font-style: italic;
+}
+.msg {
+  float: right;
+  font-style: italic;
+}
 #images{
   display: flex;
   flex-direction: row;

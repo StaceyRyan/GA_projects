@@ -1,4 +1,5 @@
 class PlantsController < ApplicationController
+
   def index
     @plants_all = Plant.all
   end
@@ -9,6 +10,7 @@ class PlantsController < ApplicationController
 
   def detailed
     @plants = Plant.find(params[:id])
+    # When the user permission is admin, the user sees an edit button on the detailed plant page
     @permission = Permission.find_by_user_id(session[:user_id])
   end
 

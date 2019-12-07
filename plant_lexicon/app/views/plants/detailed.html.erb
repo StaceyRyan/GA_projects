@@ -1,9 +1,6 @@
 <div class="content">
 </div>
-<p>You are logged into the detailed view</p>
-<% if @permission.acess_level = 'Admin' %>
-  <button class="btn" id="edit"><%= link_to "Edit Plant", edit_path(@plants[:id]) %></button>
-<% end %>
+<p class="msg">You are logged into the detailed view. </p>
 <% @plants.common_name %>
   <div> <h3><%= @plants.common_name %><h4> <h4><%= @plants.scientific_name %></h4> </div>
 
@@ -21,3 +18,8 @@
   <div id="mature"><img class="content-image" src=<%= @plants.image_mature %>/></div>
   <div id="seeds"><img class="content-image" src=<%= @plants.image_seedpod %>/></div>
 </div>
+<% if @permission.acess_level['Admin'] %>
+  <button class="btn" id="edit"><%= link_to "Edit Plant", edit_path(@plants[:id]) %></button>
+<% else %>
+  <p class="msg"> Only administration level users can edit entries.</p>
+<% end %>

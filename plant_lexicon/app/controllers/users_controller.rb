@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to login_path
+      redirect_to loggedin_index_path
     else
       redirect_to '/users/register'
     end
