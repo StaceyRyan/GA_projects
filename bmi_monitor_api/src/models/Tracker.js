@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bmiSchema = new mongoose.Schema({
-    date: {type: Date, required: true, unique: true},
+    date: {type: String, required: true, unique: true},
     height: Number,
     weight: Number,
     chest: Number,

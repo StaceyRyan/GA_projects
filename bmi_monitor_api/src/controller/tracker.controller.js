@@ -11,7 +11,9 @@ class TrackerControl {
         let status = 0;
         let msg = "";
 
-        body.date = moment(body.date).toISOString();
+        console.log(body.date);
+
+        //body.date = moment(body.date, 'DD-MM-YYYY');
         console.log(body);
 
         try {
@@ -25,6 +27,19 @@ class TrackerControl {
         }
         return { status: status, msg: msg };
     }
+
+    async findAll() {
+        return TrackerModel.find({})
+    }
+
+    async updateByDate(date, body) {
+        return TrackerModel.findOneAndUpdate(
+            {date: date},
+            body,
+            {new: true})
+    }
+
+
     async deleteByDate(date) {
         const delRes = await TrackerModel.deleteOne({ date });
 

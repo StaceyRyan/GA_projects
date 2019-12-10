@@ -24,6 +24,10 @@ router.post('/add', async (req, res)  => {
     res.status(newEntry.status).send(newEntry.msg);
 });
 
+router.get('/find', async (req, res) => {
+    res.json(await TrkController.findAll());
+});
+
 router.put('/edit/:date', async (req, res) => {
     res.json(await TrkController.updateByDate(req.params.date, req.body)).send();
  })
