@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const router = express.Router();
 const TrackerController = require('./controller/tracker.controller');
 const TrkController = new TrackerController();
-
 require('./mongo');
+
 
 router.use(bodyParser.json());
 
@@ -20,6 +20,7 @@ router.get('/', function (req, res) {
 
 //new entry route
 router.post('/add', async (req, res)  => {
+    res.send('BMI add new data')
     const newEntry = await TrkController.newEntry(req.body);
     res.status(newEntry.status).send(newEntry.msg);
 });
