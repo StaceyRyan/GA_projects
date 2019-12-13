@@ -13,35 +13,57 @@ export class DataForm extends React.Component {
             bmi: "",
         };
 
-        this.handleAdd = this.handleAdd.bind(this);
+        this.handleKeyStrike = this.handleKeyStrike.bind(this);
+        this.addNewData = this.addNewData.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
     }
 
-    handleAdd(event) {
-        const date = event.target.date;
+    handleKeyStrike(event) {
+        //the name on the RHS, in event.target.name is a protected term
+        const keystrike = event.target.name;
         const value = event.target.value;
-        this.setState({ [date]: value });
+        this.setState({ [keystrike]: value });
     }
 
     handleSubmit(event) {
         event.preventDefault();
 
-        console.log(this.state);
+        console.log('submit button handled');
 
-        if (!this.props.match.params._id) {
-            this.addNewData();
-        }
-        else {
-            this.addNewData();
-        }
+        // if (!this.props.match.params.date) {
+        //     this.addNewData();
+        // }
+        // else {
+        //     this.updateData();
+        // }
     }
 
     addNewData() {
-        fetch('http://local:3000/add', {
+        fetch('http://localhost:3000/add', {
             method: 'POST',
-            mode: 'no-cors',
+            mode: 'cors',
             headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                date: this.state.date,
+                height: this.state.height,
+                chest: this.state.chest,
+                waist: this.state.waist,
+                hips: this.state.hips,
+                bmi: this.state.bmi,
+            })
+        })
+            .then((res) => res.json()).then((data) => {
+                console.log(data);
+                // this.props.history.push('/');
+            })
+            .catch((e) => console.log(e));
+    }
+
+    updateData() {
+        const date = this.props.match.params.id;
+        fetch(`http://localhost:3000/update/${date}`, {
+            method: 'PUT',
+            mode: 'cors',
             body: JSON.stringify({
                 date: this.data.date,
                 height: this.data.height,
@@ -49,13 +71,12 @@ export class DataForm extends React.Component {
                 waist: this.data.waist,
                 hips: this.data.hips,
                 bmi: this.data.bmi,
+            }).then((res) => {
+                console.log('update data');
+                this.props.histoyr.push('/');
             })
         })
-            .then((res) => res.json()).then((data) => {
-                console.log(data);
-                this.props.history.push('/');
-            })
-            .catch((e) => console.log(e));
+                .catch((e) => console.log(e));
     }
 
     render() {
@@ -71,7 +92,16 @@ export class DataForm extends React.Component {
                         <input type="text" name="date"
                                 value={this.state.date}
                                 className={"form-control"}
-                                onChange={this.handleAdd} />
+                                onChange={this.handleKeyStrike} />
+                        </label>
+                    </div>
+                    <div className={"form-group"}>
+                        <label>
+                            Weight:
+                        <input type="text" name="weight"
+                                value={this.state.weight}
+                                className={"form-control"}
+                                onChange={this.handleKeyStrike} />
                         </label>
                     </div>
                     <div className={"form-group"}>
@@ -80,7 +110,7 @@ export class DataForm extends React.Component {
                         <input type="text" name="height"
                                 value={this.state.height}
                                 className={"form-control"}
-                                onChange={this.handleAdd} />
+                                onChange={this.handleKeyStrike} />
                         </label>
                     </div>
                     <div className={"form-group"}>
@@ -89,31 +119,39 @@ export class DataForm extends React.Component {
                         <input type="text" name="chest"
                                 value={this.state.chest}
                                 className={"form-control"}
-                                onChange={this.handleAdd} />
+                                onChange={this.handleKeyStrike} />
                         </label>
                     </div>
                     <div className={"form-group"}>
                         <label>
                             Waist:
-                        <input type={Number} name="waist"
+                        <input type="text" name="waist"
                                 value={this.state.waist}
                                 className={"form-control"}
-                                onChange={this.handleAdd} />
+                                onChange={this.handleKeyStrike} />
                         </label>
                     </div>
                     <div className={"form-group"}>
                         <label>
                             Hips:
-                        <input type={Number} name="hips"
+                        <input type="text" name="hips"
                                 value={this.state.hips}
                                 className={"form-control"}
-                                onChange={this.handleAdd} />
+                                onChange={this.handleKeyStrike} />
+                        </label>
+                    </div>
+                    <div className={"form-group"}>
+                        <label>
+                            BMI:
+                        <input type="text" name="bmi"
+                                value={this.state.bmi}
+                                className={"form-control"}
+                                onChange={this.handleKeyStrike} />
                         </label>
                     </div>
                 </form>
                 <div className={"btn btn-secondary btn-sm"}>
-
-                    <input type="submit" value="Submit" />
+                < button onClick={this.addNewData} type="button" className="btn btn-secondary btn-sm">Submit</button>
                 </div>
             </React.Fragment>
         )

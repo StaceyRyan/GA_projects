@@ -20,7 +20,7 @@ router.get('/', function (req, res) {
 
 //new entry route
 router.post('/add', async (req, res)  => {
-    res.send('BMI add new data')
+    // res.send('BMI add new data')
     const newEntry = await TrkController.newEntry(req.body);
     res.status(newEntry.status).send(newEntry.msg);
 });
