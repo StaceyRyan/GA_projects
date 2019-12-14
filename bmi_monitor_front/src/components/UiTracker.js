@@ -1,14 +1,20 @@
 import React from 'react';
 import DataForm from './DataForm';
+import ListGroup from 'react-bootstrap/ListGroup';
+import EditForm from './EditForm';
+import { Button } from 'react-bootstrap';
+
 
 class UiTracker extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            seePrevious: [],
             showDataForm: false,
-            addNew: []
+            showEditForm: false,
+            seePrevious: [],
+            addNew: [],
+            currentEditIndex: null
         };
     }
 
@@ -18,23 +24,37 @@ class UiTracker extends React.Component {
         const trackerData = await seePrevious.json();
         this.setState({
             seePrevious: trackerData,
-            showDataForm: false
+            showDataForm: false,
+            showEditForm: false
         })
     }
 
     handleAddNew = async () => {
         console.log('handle new')
         this.setState({
-            showDataForm: true
+            showDataForm: true,
+            showEditForm: false
         })
-        
+
     }
-    handleEdit = async () => {
+    handleEdit = async (id) => {
         console.log('handle edit')
-        const updateData = <DataForm />
+        const recIndex = this.state.seePrevious.findIndex((prev) => {
+            return prev._id === id;
+        });
+        console.log('testing if the record works', recIndex)
         this.setState({
-            updateData
+            currentEditIndex: recIndex,
+            showDataForm: false,
+            showEditForm: true
         })
+    }
+
+    calcBodyMass = async () => {
+        let weight = this.weight;
+        let height = this.height / 100;
+        let bmiHeight = height * height;
+        return weight / bmiHeight
     }
 
     render() {
@@ -45,22 +65,31 @@ class UiTracker extends React.Component {
                 </button>
 
                 < button onClick={this.handleAddNew} type="button" className="btn btn-secondary btn-sm">Add New</button>
-         <div>
-             {this.state.showDataForm && <DataForm />}
-         </div>
-
-                <ul>
+                <div>
+                    {this.state.showDataForm && <DataForm />}
+                    {this.state.showEditForm && <EditForm />}
+                    {/* {this.state.currentEditIndex > -1 && <EditForm record={this.state.seePrevious[this.state.currentEditIndex]} />} */}
+                </div>
+                <div>
                     {
                         this.state.seePrevious.map((previousData) => {
-                            return( 
-                                <li key={previousData._id}> {previousData.date} {previousData.weight} 
-                                < button onClick={this.handleEdit} type="button" className="btn btn-secondary btn-sm">Edit</button>
+                            return (
+                                <li key={previousData._id}>
+                                    <ListGroup horizontal>
+                                        <ListGroup.Item>{previousData.date}</ListGroup.Item>
+                                        <ListGroup.Item>{previousData.height} cm</ListGroup.Item>
+                                        <ListGroup.Item>{previousData.weight} kg</ListGroup.Item>
+                                        <ListGroup.Item>{previousData.bmi} kg/m<sup>2</sup></ListGroup.Item>
+                                    </ListGroup>
+                                    < Button variant="outline-danger" onClick={() => this.handleEdit(previousData._id)}
+                                        className="btn btn-secondary btn-sm">
+                                        Edit
+                                        </Button>
                                 </li>)
-                
-
                         })
                     }
-                </ul>
+                </div>
+
             </div>
         )
     }

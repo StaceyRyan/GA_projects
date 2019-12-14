@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import UiTracker from './UiTracker.js';
 
-export class DataForm extends React.Component {
+
+class EditForm extends React.Component {
     constructor(props) {
         super(props);
 
@@ -14,36 +14,23 @@ export class DataForm extends React.Component {
             waist: "",
             hips: "",
             bmi: "",
-            submitDisabled: true
         };
 
         this.handleKeyStrike = this.handleKeyStrike.bind(this);
-        this.addNewData = this.addNewData.bind(this);
+        this.updateData = this.updateData.bind(this);
     }
-
     handleKeyStrike(event) {
         //the name on the RHS, in event.target.name is a protected term
         const keystrike = event.target.name;
         const value = event.target.value;
-        this.setState({ [keystrike]: value }, () => {
-            if (this.state.date && this.state.bmi) {
-                this.setState({
-                    submitDisabled: false
-                })
-            }
-            else {
-                this.setState({
-                    submitDisabled: true
-                })
-            }
-
-        });
+        this.setState({ [keystrike]: value });
     }
-    async addNewData() {
-        const response = await fetch('http://localhost:3000/add', {
-            method: 'POST',
+
+    async updateData() {
+        const date = this.props.match.state.date;
+        fetch(`http://localhost:3000/update/${date}`, {
+            method: 'PUT',
             mode: 'cors',
-            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 date: this.state.date,
                 weight: this.state.weight,
@@ -53,19 +40,14 @@ export class DataForm extends React.Component {
                 hips: this.state.hips,
                 bmi: this.state.bmi,
             })
-        });
-        if (!response.ok) {
-            alert("This date already entered");
-        }
+        }).catch((e) => console.log(e));
     }
 
     render() {
-        if (this.state.isLoading) {
-            return <p>Loading Data</p>
-        }
+        console.log('Edit form check', this.props.record)
         return (
             <React.Fragment>
-                <form onSubmit={this.handleAdd}>
+                <form onSubmit={this.handleEdit}>
                     <div className={"form-group"}>
                         <label>
                             Date:
@@ -130,10 +112,10 @@ export class DataForm extends React.Component {
                         </label>
                     </div>
                 </form>
-                <Button onClick={this.addNewData} variant="primary" size="lg" disabled={this.state.submitDisabled}>Submit</Button>
+                <Button onClick={this.updateData} variant="warning" size="lg">Update</Button>
             </React.Fragment>
         )
     }
 }
 
-export default DataForm;
+export default EditForm;
