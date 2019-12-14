@@ -17,7 +17,7 @@ class EditForm extends React.Component {
         };
 
         this.handleKeyStrike = this.handleKeyStrike.bind(this);
-        this.updateData = this.updateData.bind(this);
+        // this.updateData = this.updateData.bind(this);
     }
     handleKeyStrike(event) {
         //the name on the RHS, in event.target.name is a protected term
@@ -25,24 +25,29 @@ class EditForm extends React.Component {
         const value = event.target.value;
         this.setState({ [keystrike]: value });
     }
-
+/*
     async updateData() {
-        const date = this.props.match.state.date;
-        fetch(`http://localhost:3000/update/${date}`, {
+        const response = await fetch(`http://localhost:3000/edit/${this.state.date}`, {
             method: 'PUT',
             mode: 'cors',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                date: this.state.date,
+                date: this.props.record.date,
                 weight: this.state.weight,
                 height: this.state.height,
                 chest: this.state.chest,
                 waist: this.state.waist,
                 hips: this.state.hips,
                 bmi: this.state.bmi,
+                this.props.record....
             })
-        }).catch((e) => console.log(e));
+        });
+        if (!response.ok) {
+            alert("Entry form failed to update. Check date, height and weight are all complete.");
+        }
+        this.props.hideEditForm
     }
-
+*/
     render() {
         console.log('Edit form check', this.props.record)
         return (
@@ -52,7 +57,7 @@ class EditForm extends React.Component {
                         <label>
                             Date:
                         <input type="text" name="date"
-                                value={this.state.date}
+                                value={this.props.record.date}
                                 className={"form-control"}
                                 onChange={this.handleKeyStrike} />
                         </label>

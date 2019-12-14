@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const bmiSchema = new mongoose.Schema({
     date: {type: String, required: true, unique: true},
-    height: Number,
-    weight: Number,
+    height: {type: Number, required: true},
+    weight: {type: Number, required: true},
     chest: Number,
     waist: Number,
     hips: Number,
-    bmi: {type: Number, required: true}
+    bmi: Number
 })
 
 const Tracker = mongoose.model('BMI', bmiSchema);

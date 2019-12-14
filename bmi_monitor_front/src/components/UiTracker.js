@@ -14,7 +14,7 @@ class UiTracker extends React.Component {
             showEditForm: false,
             seePrevious: [],
             addNew: [],
-            currentEditIndex: null
+            currentEditIndex: -1
         };
     }
 
@@ -50,11 +50,8 @@ class UiTracker extends React.Component {
         })
     }
 
-    calcBodyMass = async () => {
-        let weight = this.weight;
-        let height = this.height / 100;
-        let bmiHeight = height * height;
-        return weight / bmiHeight
+    hideEdit() {
+        // chnge state currentEditIndex back to -1
     }
 
     render() {
@@ -67,8 +64,8 @@ class UiTracker extends React.Component {
                 < button onClick={this.handleAddNew} type="button" className="btn btn-secondary btn-sm">Add New</button>
                 <div>
                     {this.state.showDataForm && <DataForm />}
-                    {this.state.showEditForm && <EditForm />}
-                    {/* {this.state.currentEditIndex > -1 && <EditForm record={this.state.seePrevious[this.state.currentEditIndex]} />} */}
+                    {/* {this.state.showEditForm && <EditForm />} */}
+                    {this.state.currentEditIndex > -1 && <EditForm record={this.state.seePrevious[this.state.currentEditIndex]} hideEditForm={this.hideEdit} />}
                 </div>
                 <div>
                     {

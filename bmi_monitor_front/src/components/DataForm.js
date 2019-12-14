@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import UiTracker from './UiTracker.js';
+import CalcBodyMass from './CalcBodyMass';
 
 export class DataForm extends React.Component {
     constructor(props) {
@@ -26,7 +26,7 @@ export class DataForm extends React.Component {
         const keystrike = event.target.name;
         const value = event.target.value;
         this.setState({ [keystrike]: value }, () => {
-            if (this.state.date && this.state.bmi) {
+            if (this.state.date && this.state.height && this.state.weight) {
                 this.setState({
                     submitDisabled: false
                 })
@@ -51,7 +51,8 @@ export class DataForm extends React.Component {
                 chest: this.state.chest,
                 waist: this.state.waist,
                 hips: this.state.hips,
-                bmi: this.state.bmi,
+                bmi: this.state.bmi
+                //change bmi to be calculation
             })
         });
         if (!response.ok) {
