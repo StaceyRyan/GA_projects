@@ -22,8 +22,9 @@ class TrackerControl {
             msg = "New entry added";
         }
         catch (e) {
-            status = 500;
-            msg = e;
+            await this.updateByDate(body.date, body);
+            status = 204;
+            msg = "Record updated";
         }
         return { status: status, msg: msg };
     }

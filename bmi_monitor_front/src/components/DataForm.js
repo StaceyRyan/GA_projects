@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 export class DataForm extends React.Component {
     constructor(props) {
@@ -6,11 +7,13 @@ export class DataForm extends React.Component {
 
         this.state = {
             date: "",
+            weight: "",
             height: "",
             chest: "",
             waist: "",
             hips: "",
             bmi: "",
+            submitDisabler: true
         };
 
         this.handleKeyStrike = this.handleKeyStrike.bind(this);
@@ -22,61 +25,63 @@ export class DataForm extends React.Component {
         //the name on the RHS, in event.target.name is a protected term
         const keystrike = event.target.name;
         const value = event.target.value;
-        this.setState({ [keystrike]: value });
+        this.setState({ [keystrike]: value }, () => {
+            if (this.state.date && this.state.bmi) {
+                this.setState({
+                    submitDisabler: false
+                })
+            }
+            else {
+                this.setState({
+                    submitDisabler: true
+                })
+            }
+
+        });
     }
 
     handleSubmit(event) {
-        event.preventDefault();
+        if (this.state.date && this.state.bmi) {
+            this.addNewData()
 
-        console.log('submit button handled');
-
-        // if (!this.props.match.params.date) {
-        //     this.addNewData();
-        // }
-        // else {
-        //     this.updateData();
-        // }
+        }
     }
 
-    addNewData() {
-        fetch('http://localhost:3000/add', {
+    async addNewData() {
+        const response = await fetch('http://localhost:3000/add', {
             method: 'POST',
             mode: 'cors',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 date: this.state.date,
+                weight: this.state.weight,
                 height: this.state.height,
                 chest: this.state.chest,
                 waist: this.state.waist,
                 hips: this.state.hips,
                 bmi: this.state.bmi,
             })
-        })
-            .then((res) => res.json()).then((data) => {
-                console.log(data);
-                // this.props.history.push('/');
-            })
-            .catch((e) => console.log(e));
+        });
+        if (!response.ok) {
+            alert("This date already entered");
+        }
     }
 
     updateData() {
-        const date = this.props.match.params.id;
+        const date = this.props.match.state.date;
         fetch(`http://localhost:3000/update/${date}`, {
             method: 'PUT',
             mode: 'cors',
             body: JSON.stringify({
-                date: this.data.date,
-                height: this.data.height,
-                chest: this.data.chest,
-                waist: this.data.waist,
-                hips: this.data.hips,
-                bmi: this.data.bmi,
-            }).then((res) => {
-                console.log('update data');
-                this.props.histoyr.push('/');
+                date: this.state.date,
+                weight: this.state.weight,
+                height: this.state.height,
+                chest: this.state.chest,
+                waist: this.state.waist,
+                hips: this.state.hips,
+                bmi: this.state.bmi,
             })
-        })
-                .catch((e) => console.log(e));
+        }).catch((e) => console.log(e));
     }
 
     render() {
@@ -150,9 +155,7 @@ export class DataForm extends React.Component {
                         </label>
                     </div>
                 </form>
-                <div className={"btn btn-secondary btn-sm"}>
-                < button onClick={this.addNewData} type="button" className="btn btn-secondary btn-sm">Submit</button>
-                </div>
+                <Button onClick={this.handleSubmit} variant="primary" size="lg" disabled={this.state.submitDisabler}>Submit</Button>
             </React.Fragment>
         )
     }

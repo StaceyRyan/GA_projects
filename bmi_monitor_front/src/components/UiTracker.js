@@ -7,6 +7,7 @@ class UiTracker extends React.Component {
         super();
         this.state = {
             seePrevious: [],
+            showDataForm: false,
             addNew: []
         };
     }
@@ -16,17 +17,24 @@ class UiTracker extends React.Component {
         const seePrevious = await fetch('http://localhost:3000/find')
         const trackerData = await seePrevious.json();
         this.setState({
-            seePrevious: trackerData
+            seePrevious: trackerData,
+            showDataForm: false
         })
     }
 
     handleAddNew = async () => {
         console.log('handle new')
-        const newData = <DataForm />
         this.setState({
-            newData
+            showDataForm: true
         })
         
+    }
+    handleEdit = async () => {
+        console.log('handle edit')
+        const updateData = <DataForm />
+        this.setState({
+            updateData
+        })
     }
 
     render() {
@@ -38,15 +46,17 @@ class UiTracker extends React.Component {
 
                 < button onClick={this.handleAddNew} type="button" className="btn btn-secondary btn-sm">Add New</button>
          <div>
-             {this.state.newData}
+             {this.state.showDataForm && <DataForm />}
          </div>
 
                 <ul>
                     {
                         this.state.seePrevious.map((previousData) => {
-                            return <div>
-                                <li key={previousData._id}> {previousData.date} {previousData.weight} </li>
-                            </div>
+                            return( 
+                                <li key={previousData._id}> {previousData.date} {previousData.weight} 
+                                < button onClick={this.handleEdit} type="button" className="btn btn-secondary btn-sm">Edit</button>
+                                </li>)
+                
 
                         })
                     }
