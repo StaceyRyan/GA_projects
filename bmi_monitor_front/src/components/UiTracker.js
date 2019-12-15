@@ -16,6 +16,8 @@ class UiTracker extends React.Component {
             addNew: [],
             currentEditIndex: -1
         };
+        this.handleLoadButton = this.handleLoadButton.bind(this);
+        this.reloadData = this.reloadData.bind(this);
     }
 
     handleLoadButton = async () => {
@@ -49,24 +51,13 @@ class UiTracker extends React.Component {
             showEditForm: true
         })
     }
-    reloadExistingData() {
-        fetch('http://localhost:3000/find')
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            this.setState({
-                date: this.state.date,
-                weight: this.state.weight,
-                height: this.state.height,
-                chest: this.state.chest,
-                waist: this.state.waist,
-                hips: this.state.hips,
-                bmi: this.state.bmi
-            })
-        });
-    }
 
-    hideEdit() {
+    reloadData(record) {
+        console.log(record)
+        this.handleLoadButton();
+        this.setState({
+            currentEditIndex: -1
+        })
         // chnge state currentEditIndex back to -1
     }
 
@@ -80,7 +71,7 @@ class UiTracker extends React.Component {
                 < button onClick={this.handleAddNew} type="button" className="btn btn-secondary btn-sm">Add New</button>
                 <div>
                     {this.state.showDataForm && <DataForm />}
-                    {this.state.currentEditIndex > -1 && <EditForm record={this.state.seePrevious[this.state.currentEditIndex]} hideEditForm={this.hideEdit} />}
+                    {this.state.currentEditIndex > -1 && <EditForm record={this.state.seePrevious[this.state.currentEditIndex]} hideEditForm={this.reloadData} />}
                 </div>
                 <div>
                     {

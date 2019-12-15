@@ -26,21 +26,22 @@ class EditForm extends React.Component {
         this.setState({ [keystrike]: value });
     }
 
-    async updateData(date) {
-        const response = await fetch(`http://localhost:3000/edit/${date}`, {
+    async updateData() {
+        const response = await fetch(`http://localhost:3000/edit/${this.state.date}`, {
             method: 'PUT',
             mode: 'cors',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                date: this.props.record.date,
-                weight: this.props.record.weight,
-                height: this.props.record.height,
-                chest: this.props.record.chest,
-                waist: this.props.record.waist,
-                hips: this.props.record.hips,
-                bmi: this.props.record.bmi,
+                date: this.state.date,
+                weight: this.state.weight,
+                height: this.state.height,
+                chest: this.state.chest,
+                waist: this.state.waist,
+                hips: this.state.hips,
+                bmi: this.state.bmi,
             })
         });
+        this.props.hideEditForm(this.state)
         if (!response.ok) {
             alert("Entry form failed to update. Check date, height and weight are all complete.");
         }

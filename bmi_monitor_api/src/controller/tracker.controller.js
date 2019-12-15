@@ -34,10 +34,13 @@ class TrackerControl {
     }
 
     async updateByDate(date, body) {
-        return TrackerModel.findOneAndUpdate(
+        console.log(`typeof date: ${typeof date}, value of date: ${date}`);
+        let updatedRecord = await TrackerModel.findOneAndUpdate(
             {date: date},
             body,
-            {new: true})
+            {new: true});
+        console.log(`updatedRecord: ${updatedRecord}`);
+        return updatedRecord;
     }
 
 

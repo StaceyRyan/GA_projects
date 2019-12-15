@@ -30,6 +30,8 @@ router.get('/find', async (req, res) => {
 });
 
 router.put('/edit/:date', async (req, res) => {
+    console.log(req.body);
+    console.log(`req.params.date: ${req.params.date}`);
     res.json(await TrkController.updateByDate(req.params.date, req.body)).send();
  })
 
