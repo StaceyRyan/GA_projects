@@ -1,8 +1,7 @@
 import React from 'react';
 import DataForm from './DataForm';
-import ListGroup from 'react-bootstrap/ListGroup';
 import EditForm from './EditForm';
-import { Button } from 'react-bootstrap';
+import { Button, ListGroup } from 'react-bootstrap';
 
 
 class UiTracker extends React.Component {
@@ -11,10 +10,10 @@ class UiTracker extends React.Component {
         super();
         this.state = {
             showDataForm: false,
-            showEditForm: false,
             seePrevious: [],
             addNew: [],
-            currentEditIndex: -1
+            currentEditIndex: -1,
+            actionMessage: ""
         };
         this.handleLoadButton = this.handleLoadButton.bind(this);
         this.reloadData = this.reloadData.bind(this);
@@ -56,7 +55,8 @@ class UiTracker extends React.Component {
         console.log(record)
         this.handleLoadButton();
         this.setState({
-            currentEditIndex: -1
+            currentEditIndex: -1,
+            actionMessage: "Record successfully updated"
         })
         // chnge state currentEditIndex back to -1
     }
@@ -72,6 +72,10 @@ class UiTracker extends React.Component {
                 <div>
                     {this.state.showDataForm && <DataForm />}
                     {this.state.currentEditIndex > -1 && <EditForm record={this.state.seePrevious[this.state.currentEditIndex]} hideEditForm={this.reloadData} />}
+                    {this.state.actionMessage.length > 0 &&
+                        <div className="alert alert-success" role="alert">
+                        <h4 class="alert-heading">{this.state.actionMessage}</h4>
+                    </div>}
                 </div>
                 <div>
                     {
