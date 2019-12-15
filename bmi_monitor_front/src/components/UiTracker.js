@@ -49,6 +49,22 @@ class UiTracker extends React.Component {
             showEditForm: true
         })
     }
+    reloadExistingData() {
+        fetch('http://localhost:3000/find')
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            this.setState({
+                date: this.state.date,
+                weight: this.state.weight,
+                height: this.state.height,
+                chest: this.state.chest,
+                waist: this.state.waist,
+                hips: this.state.hips,
+                bmi: this.state.bmi
+            })
+        });
+    }
 
     hideEdit() {
         // chnge state currentEditIndex back to -1
@@ -64,7 +80,6 @@ class UiTracker extends React.Component {
                 < button onClick={this.handleAddNew} type="button" className="btn btn-secondary btn-sm">Add New</button>
                 <div>
                     {this.state.showDataForm && <DataForm />}
-                    {/* {this.state.showEditForm && <EditForm />} */}
                     {this.state.currentEditIndex > -1 && <EditForm record={this.state.seePrevious[this.state.currentEditIndex]} hideEditForm={this.hideEdit} />}
                 </div>
                 <div>

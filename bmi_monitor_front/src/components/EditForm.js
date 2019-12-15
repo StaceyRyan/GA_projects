@@ -7,17 +7,17 @@ class EditForm extends React.Component {
         super(props);
 
         this.state = {
-            date: "",
-            weight: "",
-            height: "",
-            chest: "",
-            waist: "",
-            hips: "",
-            bmi: "",
+            date: props.record.date,
+            weight: props.record.weight,
+            height: props.record.height,
+            chest: props.record.chest,
+            waist: props.record.waist,
+            hips: props.record.hips,
+            bmi: props.record.bmi,
         };
 
         this.handleKeyStrike = this.handleKeyStrike.bind(this);
-        // this.updateData = this.updateData.bind(this);
+        this.updateData = this.updateData.bind(this);
     }
     handleKeyStrike(event) {
         //the name on the RHS, in event.target.name is a protected term
@@ -25,29 +25,28 @@ class EditForm extends React.Component {
         const value = event.target.value;
         this.setState({ [keystrike]: value });
     }
-/*
-    async updateData() {
-        const response = await fetch(`http://localhost:3000/edit/${this.state.date}`, {
+
+    async updateData(date) {
+        const response = await fetch(`http://localhost:3000/edit/${date}`, {
             method: 'PUT',
             mode: 'cors',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 date: this.props.record.date,
-                weight: this.state.weight,
-                height: this.state.height,
-                chest: this.state.chest,
-                waist: this.state.waist,
-                hips: this.state.hips,
-                bmi: this.state.bmi,
-                this.props.record....
+                weight: this.props.record.weight,
+                height: this.props.record.height,
+                chest: this.props.record.chest,
+                waist: this.props.record.waist,
+                hips: this.props.record.hips,
+                bmi: this.props.record.bmi,
             })
         });
         if (!response.ok) {
             alert("Entry form failed to update. Check date, height and weight are all complete.");
         }
-        this.props.hideEditForm
+        // this.props.hideEditForm
     }
-*/
+
     render() {
         console.log('Edit form check', this.props.record)
         return (
@@ -56,8 +55,8 @@ class EditForm extends React.Component {
                     <div className={"form-group"}>
                         <label>
                             Date:
-                        <input type="text" name="date"
-                                value={this.props.record.date}
+                            <input type="text" name="date"
+                                value={this.state.date}
                                 className={"form-control"}
                                 onChange={this.handleKeyStrike} />
                         </label>
