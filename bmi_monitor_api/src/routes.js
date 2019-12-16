@@ -35,8 +35,9 @@ router.put('/edit/:date', async (req, res) => {
     res.json(await TrkController.updateByDate(req.params.date, req.body)).send();
  })
 
-router.delete('/delete/:date', async (req, res) => {
-    const deleteResult = await TrkController.deleteByDate(req.params.date);
+router.delete('/delete/:_id', async (req, res) => {
+    console.log('delete button activated')
+    const deleteResult = await TrkController.deleteById(req.params._id);
     res.send(deleteResult);
 });
 

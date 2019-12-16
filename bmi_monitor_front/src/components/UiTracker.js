@@ -51,14 +51,34 @@ class UiTracker extends React.Component {
         })
     }
 
-    reloadData(record) {
-        console.log(record)
+    handleDeleteEntry = async (deletable) => {
+        console.log('Delete button activated');
+        console.log(`http://localhost:3000/delete/${deletable}`)
+        const response = await fetch(`http://localhost:3000/delete/${deletable}`, {
+            method: 'DELETE',
+            body: JSON.stringify({
+                date: this.state.date,
+                weight: this.state.weight,
+                height: this.state.height,
+                chest: this.state.chest,
+                waist: this.state.waist,
+                hips: this.state.hips,
+                bmi: this.state.bmi
+            })
+        });
+        this.setState({
+            currentEditIndex: -1,
+            actionMessage: "Record deleted",
+        });
+        this.reloadData();
+    }
+
+    reloadData() {
         this.handleLoadButton();
         this.setState({
             currentEditIndex: -1,
             actionMessage: "Record successfully updated"
         })
-        // chnge state currentEditIndex back to -1
     }
 
     render() {
@@ -70,12 +90,12 @@ class UiTracker extends React.Component {
 
                 < button onClick={this.handleAddNew} type="button" className="btn btn-secondary btn-sm">Add New</button>
                 <div>
-                    {this.state.showDataForm && <DataForm />}
+                    {this.state.showDataForm && <DataForm handleAdd={this.reloadData}/>} 
                     {this.state.currentEditIndex > -1 && <EditForm record={this.state.seePrevious[this.state.currentEditIndex]} hideEditForm={this.reloadData} />}
                     {this.state.actionMessage.length > 0 &&
                         <div className="alert alert-success" role="alert">
-                        <h4 class="alert-heading">{this.state.actionMessage}</h4>
-                    </div>}
+                            <h4 className="alert-heading">{this.state.actionMessage}</h4>
+                        </div>}
                 </div>
                 <div>
                     {
@@ -91,6 +111,10 @@ class UiTracker extends React.Component {
                                     < Button variant="outline-danger" onClick={() => this.handleEdit(previousData._id)}
                                         className="btn btn-secondary btn-sm">
                                         Edit
+                                        </Button>
+                                    < Button variant="danger" onClick={() => this.handleDeleteEntry(previousData._id)}
+                                        className="btn btn-secondary btn-sm">
+                                        Delete
                                         </Button>
                                 </li>)
                         })

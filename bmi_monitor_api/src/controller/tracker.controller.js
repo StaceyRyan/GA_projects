@@ -44,15 +44,15 @@ class TrackerControl {
     }
 
 
-    async deleteByDate(date) {
-        const delRes = await TrackerModel.deleteOne({ date });
+    async deleteById(_id) {
+        const deleteResult = await TrackerModel.deleteOne({ _id: _id });
 
-        if (delRes.deletedCount > 0) {
-            return `BMI entry ${date} deleted`;
+        if (deleteResult.deletedCount > 0) {
+            return `BMI entry ${_id} deleted`;
         }
         //can have return without else because if the if statement fails
         //then it MUST return this
-        return `BMI entry ${date} not deleted`;
+        return `BMI entry ${_id} not deleted`;
     }
 }
 

@@ -55,6 +55,7 @@ export class DataForm extends React.Component {
                 //change bmi to be calculation
             })
         });
+        this.props.handleAdd(this.state);
         if (!response.ok) {
             alert("This date is already entered");
         }
@@ -66,18 +67,7 @@ export class DataForm extends React.Component {
         }
         return (
             <React.Fragment>
-                {/* <Form>
-                    <Form.Group as={Row}>
-                        <Form.Label column sm="2">
-                            Date:
-                        </Form.Label>
-                    <Col sm="10">
-                        <Form.Control plaintext readOnly defaultValue="dd=mm=yyyy" />
-                        </Col>
-                        </Form.Group>
-
-                </Form> */}
-                <form onSubmit={this.handleAdd}>
+                <form>
                     <div className={"form-group"}>
                         <label>
                             Date:
