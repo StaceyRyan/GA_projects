@@ -108,12 +108,10 @@ class UiTracker extends React.Component {
                                         <ListGroup.Item>{previousData.weight} kg</ListGroup.Item>
                                         <ListGroup.Item>{previousData.bmi} kg/m<sup>2</sup></ListGroup.Item>
                                     </ListGroup>
-                                    < Button variant="outline-danger" onClick={() => this.handleEdit(previousData._id)}
-                                        className="btn btn-secondary btn-sm">
+                                    < Button variant="outline-warning" onClick={() => this.handleEdit(previousData._id)}>
                                         Edit
                                         </Button>
-                                    < Button variant="danger" onClick={() => this.handleDeleteEntry(previousData._id)}
-                                        className="btn btn-secondary btn-sm">
+                                    < Button variant="outline-danger" onClick={() => this.handleDeleteEntry(previousData._id)}>
                                         Delete
                                         </Button>
                                 </li>)
