@@ -19,12 +19,11 @@ Storing projects completed at GA
 #### EXPRESS_PORT=3000
 #### EXPRESS_HOST=localhost
 #### MONGO_DATABASE=tracker
-- Via terminal (or your preferred text editing software such as Visual Studio), navigate to the bmi_monitor_api directory and load the node packages via npm install.
-- Still in terminal, execute node ./src/server.js or npx nodemon ./src/server.js if you are familiar with the nodemon package. This should activate the localserver:3000.
-- Navigate to the bmi_monitor_front folder and activate the local server here as well. It should run on localserver:3003
-
-- Currently, the API calls in bmi_monitor_front are all hard coded to localhost:3000 so the bmi_monitor_api must be run first to ensure it is on localhost:3000.
+- Via terminal (or your preferred text editing software such as Visual Studio), load the node packages via npm install for each directory (bmi_tracker_front and bmi_tracker_api).
+- For the bmi_tracker_api, to activate the local host, execute <node ./src/server.js> or, if you are more comfortable with the nodemon package, run <npx nodemon ./src/server.js>. 
+-Currently, the API calls in bmi_monitor_front are all hard coded to localhost:3000 so the bmi_monitor_api must be run first to ensure it is on localhost:3000. Confirm that this part of the app has activated on the localserver:3000.
 - Launch bmi_monitor_front and go to the root page '/'.
+- bmi_tracker_front is coded to run on localserver:3003 to ensure 3000 is left open for the node.js server.
 
 ### Issues Encountered
 - To ensure DRY code, it would be preferable to have one form used for both adding new data and editing existing data. At this stage, I did not have the skill to load the previous data into the form if I used one form for both. The future version will use one form.
