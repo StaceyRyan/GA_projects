@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import CalcBodyMass from './CalcBodyMass';
 
 export class DataForm extends React.Component {
     constructor(props) {
@@ -52,7 +51,6 @@ export class DataForm extends React.Component {
                 waist: this.state.waist,
                 hips: this.state.hips,
                 bmi: this.state.bmi
-                //change bmi to be calculation
             })
         });
         this.props.handleAdd(this.state);
@@ -122,7 +120,7 @@ export class DataForm extends React.Component {
                                 onChange={this.handleKeyStrike} />
                         </label>
                     </div>
-                    <div className={"form-group"}>
+                    {/* <div className={"form-group"}>
                         <label>
                             BMI:
                         <input type="text" name="bmi"
@@ -130,7 +128,7 @@ export class DataForm extends React.Component {
                                 className={"form-control"}
                                 onChange={this.handleKeyStrike} />
                         </label>
-                    </div>
+                    </div> */}
                 </form>
                 <Button onClick={this.addNewData} variant="primary" size="lg" disabled={this.state.submitDisabled}>Submit</Button>
             </React.Fragment>

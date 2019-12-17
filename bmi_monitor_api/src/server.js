@@ -10,7 +10,7 @@ server.use('/', bmiRoutes)
 
 
 
-const port = process.env.EXPRESS_PORT || 4000;
+const port = process.env.EXPRESS_PORT || 3000;
 const host = process.env.EXPRESS_HOST || "localhost";
 
 server.listen(port, host, () => {

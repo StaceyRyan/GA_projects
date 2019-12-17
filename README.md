@@ -15,7 +15,14 @@ Storing projects completed at GA
 
 ### Installation instructions
 - Download both bmi_monitor_api and bmi_monitor_front
-- Launch the local 'server' via bmi_monitor_api first so that it runs on Localhost:3000.
+- You will need to set your environment variables for the bmi_monitor_api to:
+EXPRESS_PORT=3000
+EXPRESS_HOST=localhost
+MONGO_DATABASE=tracker
+- Via terminal (or your preferred text editing software such as Visual Studio), navigate to the bmi_monitor_api directory and load the node packages via npm install.
+- Still in terminal, execute node ./src/server.js or npx nodemon ./src/server.js if you are familiar with the nodemon package. This should activate the localserver:3000.
+- Navigate to the bmi_monitor_front folder and activate the local server here as well. It should run on localserver:3003
+
 - Currently, the API calls in bmi_monitor_front are all hard coded to localhost:3000 so the bmi_monitor_api must be run first to ensure it is on localhost:3000.
 - Launch bmi_monitor_front and go to the root page '/'.
 

@@ -45,7 +45,8 @@ class UiTracker extends React.Component {
         });
         console.log('testing if the record works', recIndex)
         this.setState({
-            currentEditIndex: recIndex,
+            currentEditIndex: recIndex,            
+            actionMessage: "Record successfully updated",
             showDataForm: false,
             showEditForm: true
         })
@@ -81,6 +82,14 @@ class UiTracker extends React.Component {
         })
     }
 
+    calcBodyMass(h, w){
+        let weight = w;
+        let height = h / 100;
+        let bmiHeight = height * height;
+        let bmi = weight / bmiHeight;
+        return bmi.toFixed(2);
+    }
+
     render() {
         return (
             <div>
@@ -106,7 +115,7 @@ class UiTracker extends React.Component {
                                         <ListGroup.Item>{previousData.date}</ListGroup.Item>
                                         <ListGroup.Item>{previousData.height} cm</ListGroup.Item>
                                         <ListGroup.Item>{previousData.weight} kg</ListGroup.Item>
-                                        <ListGroup.Item>{previousData.bmi} kg/m<sup>2</sup></ListGroup.Item>
+                                        <ListGroup.Item>{this.calcBodyMass(previousData.height, previousData.weight)} kg/m<sup>2</sup></ListGroup.Item>
                                     </ListGroup>
                                     < Button variant="outline-warning" onClick={() => this.handleEdit(previousData._id)}>
                                         Edit

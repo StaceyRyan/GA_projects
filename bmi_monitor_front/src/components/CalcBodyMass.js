@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CalcBodyMass extends React.Component {
+class calcBodyMass extends React.Component {
 
     calcBodyMass = async () => {
         let weight = this.weight;
