@@ -1,22 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import LoginForm from './LoginForm';
-import BasicButtons from './BasicButtons';
-import App from '../App';
+import BasicButton from './BasicButtons';
 
-const Walkies_Human = () => 
-{
-    const [basicButtons, loginForm] = useState(App);
+class Walkies_Human extends React.Component {
+    constructor() {
+        super();
 
-    const renderBasicButtons = () => 
-    {
-        let basicButtons = <BasicButtons />
-        return basicButtons;
+        this.state = {
+            showLoginBoxes: false,
+            showBasicButtons: true
+        };
+
+        //todo put bind stuff here
+        this.showLoginBoxes = this.showLoginBoxes.bind(this);
     }
 
+    showLoginBoxes() {
+        console.log('reveal login boxes hit')
+        const RevealedLoginForm = <LoginForm />
+        this.setState({
+            showLoginBoxes: true,
+        })
+    }
+
+    render() {
         return (
             <>
-                {renderBasicButtons()}
+                <BasicButton />
             </>
-        )}
+        )
+    }
+}
 
 export default Walkies_Human;

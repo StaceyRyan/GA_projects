@@ -7,6 +7,9 @@ const UserRouter = require('./routes/User.route.js');
 const DogRouter = require('./routes/Dog.route.js');
 const AuthenticateRouter = require('./routes/Authenticate.route.js');
 
+app.use(express.json());
+app.use(express.urlencoded({extended: false}))
+
 const port = process.env.EXPRESS_PORT || 4000;
 const host = process.env.EXPRESS_HOST || "local host"
 
@@ -21,6 +24,6 @@ app.use(session({
 //routes
 app.use('/dog', DogRouter);
 app.use('/user', UserRouter);
-// app.use('/authenticate', AuthenticateRouter);
+app.use('/auth', AuthenticateRouter);
 
 app.listen(port, () => {console.log(`Listening on port ${port}`)});
