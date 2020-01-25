@@ -19,6 +19,10 @@ DogRouter.post('/new', async (req, res) => {
     res.json({ status: "New dog added."});
 })
 
+DogRouter.get('/show_all', async (req, res) => {
+    res.json(await Dog.findAll());
+})
+
 DogRouter.post('/update', async (req, res) => {
 
 })

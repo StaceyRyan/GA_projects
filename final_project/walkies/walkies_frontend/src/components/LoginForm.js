@@ -1,22 +1,12 @@
 import React from 'react';
+import Dog from './Dog';
 
-class LoginForm extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            username: props.username,
-            password: props.password,
-        };
-
-        // this.loginUser = this.loginUser.bind(this);
-    }
-
+const LoginForm = () => {
+    
     // loginUser(){
 
     // }
 
-    render() {
         return (
             <>
                 <div className={"form-group"}>
@@ -33,11 +23,10 @@ class LoginForm extends React.Component {
                         value={this.state.password}
                         className={"form-control"} />
                 </label>
-                <button>Login</button>
+                <button>Enter</button>
                 {/* todo add login stuff here */}
             </>
         )
-    }
 }
 
 export default LoginForm;

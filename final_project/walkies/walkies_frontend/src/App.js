@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Owner from './components/Owner';
+import Walkies_Human from './components/Walkies';
 
 function App() {
   return (
     <div className="App">
       <h1>Walkies</h1>
-      <Owner />
+      <Walkies_Human />
     </div>
   );
 }
