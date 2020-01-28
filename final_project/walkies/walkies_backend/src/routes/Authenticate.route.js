@@ -17,6 +17,7 @@ AuthenticateRouter.post('/login', async (req, res) => {
         }
 
     } else {
+        console.log({username, password})
         res.status(404).send({ error: "User not found" });
     }
 })
@@ -24,7 +25,7 @@ AuthenticateRouter.post('/login', async (req, res) => {
 AuthenticateRouter.get('/logout', (req, res) => {
     req.session.destroy();
 
-    res.json({status: "logged out"});
+    res.json({ status: "logged out" });
 })
 
 module.exports = AuthenticateRouter;

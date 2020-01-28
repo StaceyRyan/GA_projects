@@ -26,30 +26,19 @@ class DogControl {
     }
 
     async updateById(_id, body) {
-        console.log(`value of _id: ${id}, dog name: ${name}`);
-        let updatedRecord = await DogModel.findOneAndUpdate(
-            name,
-            breed,
-            dog_owner_name,
-            {address: address},
-            health_issues,
-            notes,
-            avatar,
-            body,
-            { new: true });
-        console.log(`updatedRecord: ${updatedRecord}`);
-        return updatedRecord;
+        console.log(`value of _id: ${_id}`);
+        let updateRecord = await DogModel.findOneAndUpdate({_id: _id}, body, { new: true });
+        console.log(`updatedRecord: ${updateRecord}`);
+        return updateRecord;
     }
 
-    async deleteById(_id) {
-        const deleteResult = await DogModel.deleteOne({ _id: _id });
+    async deleteById(dogId) {
+        const deleteDogEntry = await DogModel.deleteOne({ _id: dogId });
 
-        if (deleteResult.deletedCount > 0) {
-            return `Dog ${name} deleted`;
+        if (deleteDogEntry.deletedCount > 0) {
+            return `Dog ${DogModel.name} deleted`;
         }
-        //can have return without else because if the if statement fails
-        //then it MUST return this
-        return `Entry for ${name} not deleted`;
+        return `Entry for ${DogModel.name} not deleted`;
     }
 }
 

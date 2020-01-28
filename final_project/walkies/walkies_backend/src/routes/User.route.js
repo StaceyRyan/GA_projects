@@ -18,8 +18,8 @@ UserRouter.post('/newHuman', async (req, res) => {
         if (user)
             //convention says put a message with json
             //.json is used at the App level so can use .send here. If no .json at the App level (server.js), use .json here
-            res.status(201).send({ message: "User created. Please sign in", userID: user.id });
-        else res.status(500).send("Could not create user");
+            res.status(201).send({ message: 'User created. Please sign in', userID: user.id });
+        else res.status(500).send('Could not create user');
     }
 
 });
@@ -28,11 +28,6 @@ UserRouter.post('/newHuman', async (req, res) => {
 UserRouter.get('/home', function (req, res) {
     res.send('Walkies home page')
 });
-
-UserRouter.get('/findAllDogs', async (req, res) => {
-    const dogs_owned = await DogModel.find();
-    res.status(200).json(dogs_owned.map((dogs) => dogs._id));
-})
 
 
 module.exports = UserRouter;

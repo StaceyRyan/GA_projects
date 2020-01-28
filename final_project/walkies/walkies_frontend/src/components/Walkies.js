@@ -1,35 +1,58 @@
 import React from 'react';
 import LoginForm from './LoginForm';
-import BasicButton from './BasicButtons';
+import RegistrationForm from './RegistrationForm';
 
-class Walkies_Human extends React.Component {
+const formStates = {
+    showLogin: 1,
+    showRegister: 2,
+    showAnotherOption: 3,
+    showBasicButtons: 4
+}
+
+class WalkiesHuman extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            showLoginBoxes: false,
-            showBasicButtons: true
+            message: '',
+            formState: formStates.showBasicButtons
         };
 
         //todo put bind stuff here
-        this.showLoginBoxes = this.showLoginBoxes.bind(this);
+        this.handleButtonClick = this.handleButtonClick.bind(this);
     }
 
-    showLoginBoxes() {
-        console.log('reveal login boxes hit')
-        const RevealedLoginForm = <LoginForm />
-        this.setState({
-            showLoginBoxes: true,
-        })
+    handleButtonClick(clickInfo){
+
+        if(clickInfo === "login")
+        {
+            console.log("login");
+            this.setState({
+                formState: formStates.showLogin
+            })
+        }else{
+            this.setState({
+                formState: formStates.showRegister
+            })
+        }
+
     }
+
 
     render() {
         return (
             <>
-                <BasicButton />
+                {this.state.formState === formStates.showBasicButtons && 
+                            <>
+                            <button onClick={() => this.handleButtonClick("login")}>Login</button>
+                            <button onClick={() => this.handleButtonClick()}>Register</button>
+                            </>}
+                {this.state.formState === formStates.showLogin && <LoginForm/>}
+                {this.state.formState === formStates.showRegister && <RegistrationForm/>}
+
             </>
         )
     }
 }
 
-export default Walkies_Human;
+export default WalkiesHuman;

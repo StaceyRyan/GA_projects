@@ -1,6 +1,5 @@
 const express = require('express');
 const DogRouter = express.Router();
-const UserModel = require('../models/User.model.js');
 const DogModel = require('../models/Dog.model.js')
 const DogControl = require('../controllers/dog.controller.js');
 const Dog = new DogControl();
@@ -16,16 +15,23 @@ DogRouter.use((req, res, next) => {
 DogRouter.post('/new', async (req, res) => {
     const newDog = await Dog.newEntry(req.body);
     res.status(newDog.status).send(newDog.msg);
-    res.json({ status: "New dog added."});
+    res.json({ status: "New dog added." });
 })
 
 DogRouter.get('/show_all', async (req, res) => {
     res.json(await Dog.findAll());
 })
 
-DogRouter.post('/update', async (req, res) => {
-
+DogRouter.put('/update/:_id', async (req, res) => {
+    console.log(req.body);
+    console.log(`req.params._id: ${req.params._id}`);
+    res.json(await Dog.updateById(req.params._id, req.body)).send();
 })
 
+DogRouter.delete('/delete/:_id', async (req, res) => {
+    console.log(`req.params._id: ${req.params._id}`);
+    const deletedDog = await Dog.deleteById(req.params._id);
+    res.send(deletedDog);
+})
 
 module.exports = DogRouter;
