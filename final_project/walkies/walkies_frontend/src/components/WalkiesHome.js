@@ -2,20 +2,20 @@ import React from 'react';
 import LoginForm from './LoginForm';
 import RegistrationForm from './RegistrationForm';
 
-const formStates = {
+const buttonStates = {
     showLogin: 1,
     showRegister: 2,
-    showAnotherOption: 3,
+    // showOtherButton: 3,
     showBasicButtons: 4
 }
 
-class WalkiesHuman extends React.Component {
+class WalkiesHome extends React.Component {
     constructor() {
         super();
 
         this.state = {
             message: '',
-            formState: formStates.showBasicButtons
+            buttonState: buttonStates.showBasicButtons
         };
 
         //todo put bind stuff here
@@ -28,11 +28,11 @@ class WalkiesHuman extends React.Component {
         {
             console.log("login");
             this.setState({
-                formState: formStates.showLogin
+                buttonState: buttonStates.showLogin
             })
         }else{
             this.setState({
-                formState: formStates.showRegister
+                buttonState: buttonStates.showRegister
             })
         }
 
@@ -42,17 +42,17 @@ class WalkiesHuman extends React.Component {
     render() {
         return (
             <>
-                {this.state.formState === formStates.showBasicButtons && 
+                {this.state.buttonState === buttonStates.showBasicButtons && 
                             <>
                             <button onClick={() => this.handleButtonClick("login")}>Login</button>
                             <button onClick={() => this.handleButtonClick()}>Register</button>
                             </>}
-                {this.state.formState === formStates.showLogin && <LoginForm/>}
-                {this.state.formState === formStates.showRegister && <RegistrationForm/>}
+                {this.state.buttonState === buttonStates.showLogin && <LoginForm/>}
+                {this.state.buttonState === buttonStates.showRegister && <RegistrationForm/>}
 
             </>
         )
     }
 }
 
-export default WalkiesHuman;
+export default WalkiesHome;

@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import WalkiesHuman from './components/Walkies';
+import WalkiesHome from './components/WalkiesHome';
 
 function App() {
   return (
     <div className="App">
       <h1>Walkies</h1>
-      <WalkiesHuman />
+      <WalkiesHome />
     </div>
   );
 }

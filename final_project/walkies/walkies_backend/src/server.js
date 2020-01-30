@@ -1,7 +1,8 @@
 const express = require('express');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 const app = express();
-require ('./mongo');
+// require ('./mongo');
 require('dotenv').config()
 const UserRouter = require('./routes/User.route');
 const OwnerRouter = require('./routes/Owner.route');
@@ -9,6 +10,18 @@ const DogRouter = require('./routes/Dog.route');
 const {authenticateChecker} = require('./controllers/auth.controller');
 const AuthenticateRouter = require('./routes/Authenticate.route');
 const cors = require('cors');
+const mongoose = require('mongoose');
+const dbName = process.env.MONGO_DB || 'walkies';
+
+
+mongoose.connect(`mongodb://localhost/${dbName}`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error: '));
+db.once('open', function() {console.log("Mongoose is online")});
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -19,11 +32,12 @@ const host = process.env.EXPRESS_HOST || "local host"
 
 app.use(session({
     secret: process.env.SECRET,
-    name: 'doggo',
+    name: 'dog lover',
     cookie: { maxAge: 3600000 }, //one hour expiry
     resave: false,
-    saveUninitialized: false})
-);
+    saveUninitialized: false,
+    store: new MongoStore({ mongooseConnection: db })
+}));
 
 //routes
 app.use('/dog', authenticateChecker, DogRouter);

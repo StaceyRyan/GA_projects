@@ -10,15 +10,15 @@ AuthenticateRouter.post('/login', async (req, res) => {
         const passwordCheck = await bcrypt.compare(password, user.password);
         if (passwordCheck) {
             console.log("User found. Adding profile to session");
-            req.session.user = { id: user.id };
+            req.session.user = { id: user._id };
             res.status(200).send({ profile: { username: user.username, preferred_name: user.preferred_name } });
         } else {
-            res.status(404).send({ error: "No such user" });
+            res.status(404).send({ error: "Incorrect login." });
         }
 
     } else {
         console.log({username, password})
-        res.status(404).send({ error: "User not found" });
+        res.status(404).send({ error: "Incorrect login" });
     }
 })
 

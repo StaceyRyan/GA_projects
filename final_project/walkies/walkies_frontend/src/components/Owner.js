@@ -1,5 +1,5 @@
 import React from 'react';
-import Dog from './Dog';
+import DogButtons from './DogButtons';
 
 class Owner extends React.Component {
     
@@ -7,7 +7,7 @@ class Owner extends React.Component {
 render() {
     return (
         <>
-        <button onClick={set.}>
+        <button>
             Show All Dogs
         </button>
         </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Dog from './Dog';
+import DogButtons from './DogButtons';
 
 class RegistrationForm extends React.Component {
     constructor(props) {
@@ -8,9 +8,9 @@ class RegistrationForm extends React.Component {
         this.state = {
             username: '',
             password: '',
-            preferred_name: '',
+            preferredName: '',
             email: '',
-            phone_number: '',
+            phoneNumber: '',
             submitDisabled: true
         };
         this.handleKeyStrike = this.handleKeyStrike.bind(this);
@@ -20,31 +20,37 @@ class RegistrationForm extends React.Component {
     handleKeyStrike(event) {
         const keystrike = event.target.name;
         const value = event.target.value;
-        this.setState({ [keystrike]: value }, () => {
-            if (this.state.username &&
-                this.state.password &&
-                this.state.preferred_name &&
-                this.state.email &&
-                this.state.phone_number) {
-                this.setState({
-                    submitDisabled: false
-                })
-            }
-            else {
-                this.setState({
-                    submitDisabled: true
-                })
-            }
-        });
+        this.setState({ [keystrike]: value });
+
+        if (this.state.username &&
+            this.state.password &&
+            this.state.preferredName &&
+            this.state.email &&
+            this.state.phoneNumber) {
+            this.setState({
+                submitDisabled: false
+            })
+        }
+        else {
+            this.setState({
+                submitDisabled: true
+            })
+        }
     }
 
     handleSubmitButton = async () => {
         console.log('handle registration form submit button')
-        
+
         let myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
-        let raw = JSON.stringify({ "username": "Bob", "password": "123", "preferred_name": "Mr Bob", "email": "bob@gmail.com", "phone_number": 12345678 });
+        let raw = JSON.stringify({
+            "username": this.state.username,
+            "password": this.state.password,
+            "preferredName": this.state.preferredName,
+            "email": this.state.email,
+            "phoneNumber": this.state.phoneNumber
+        });
 
         let requestOptions = {
             method: 'POST',
@@ -58,7 +64,7 @@ class RegistrationForm extends React.Component {
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
 
-            console.log('New user created ' + JSON.stringify(newHuman));
+        console.log('New user created ' + JSON.stringify(newHuman));
     };
 
     render() {
@@ -69,40 +75,64 @@ class RegistrationForm extends React.Component {
                         Username:
                         <input type="text" name="username"
                             value={this.state.username}
-                            className={"form-control"} />
+                            className={"form-control"}
+                            onChange={this.handleKeyStrike} />
                     </label>
                 </div>
                 <div className={"form-group"}>
                     <label>
                         Preferred Name:
-                        <input type="text" name="preferred_name"
-                            value={this.state.preferred_name}
-                            className={"form-control"} />
+                        <input type="text" name="preferredName"
+                            value={this.state.preferredName}
+                            className={"form-control"}
+                            onChange={this.handleKeyStrike} />
                     </label>
                 </div>
                 <label>
                     Password:
                         <input type="text" name="password"
                         value={this.state.password}
-                        className={"form-control"} />
+                        className={"form-control"}
+                        onChange={this.handleKeyStrike} />
                 </label>
                 <div className={"form-group"}>
                     <label>
                         Email:
                         <input type="text" name="email"
                             value={this.state.email}
-                            className={"form-control"} />
+                            className={"form-control"}
+                            onChange={this.handleKeyStrike} />
                     </label>
                     <div className={"form-group"}>
                         <label>
                             Phone Number:
-                        <input type="text" name="phonenumber"
-                                value={this.state.phonenumber}
-                                className={"form-control"} />
+                        <input type="number" name="phoneNumber"
+                                value={this.state.phoneNumber}
+                                className={"form-control"}
+                                onChange={this.handleKeyStrike} />
+                        </label>
+                    </div>
+                    <p>Please indicate if you are a dog owner or a dog walker.</p>
+                    <div className={"form-group"}>
+                        <label>Dog Parent:
+                            <input type="radio"
+                            checked={true} 
+                            name="userRole"
+                            value="owner"
+                            onChange={this.handleKeyStrike} />
+                        </label>
+                    </div>
+                    <div className={"form-group"}>
+                        <label>Dog Walker:
+                            <input type="radio"
+                            name="userRole"
+                            value="walker"
+                            onChange={this.handleKeyStrike} />
                         </label>
                     </div>
                 </div>
-                <button>Enter</button>
+                <button onClick={this.handleSubmitButton} disabled={this.state.submitDisabled}>Submit</button>
+
             </>
         )
     }

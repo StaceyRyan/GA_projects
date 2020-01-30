@@ -20,7 +20,7 @@ DogRouter.post('/new', async (req, res) => {
 
 DogRouter.get('/show_all', async (req, res) => {
     res.json(await Dog.findAll());
-})
+});
 
 DogRouter.put('/update/:_id', async (req, res) => {
     console.log(req.body);
