@@ -14,7 +14,6 @@ const mongoose = require('mongoose');
 const dbName = process.env.MONGO_DB || 'walkies';
 const mongoURI = process.env.MONGODB_URI || `mongodb://localhost/${dbName}`;
 
-
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
