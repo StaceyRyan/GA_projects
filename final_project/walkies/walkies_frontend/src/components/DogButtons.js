@@ -7,27 +7,39 @@ const dogButtonStates = {
     showAllDogs: 2,
     showNewDog: 3,
     showUpdateDog: 4,
-    hideButtons: 5
+    allButtons: 5
 }
 class DogButtons extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            buttonState: dogButtonStates.hideButtons,
+            buttonState: dogButtonStates.noButtons,
             showDogList: []
         };
         this.handleShowAllDogsButton = this.handleShowAllDogsButton.bind(this);
+        this.handleSpecificDogButton = this.handleSpecificDogButton.bind(this);
 
     }
 
     handleShowAllDogsButton = async () => {
         console.log('handle show dogs button')
-        const fetchDogs = await fetch('http://localhost:4000/dog/show_all')
+        const fetchDogs = await fetch('/dog/show_all',
+            {credentials: "same-origin"})
         const dogList = await fetchDogs.json()
         console.log(dogList)
         this.setState({
             showDogList: dogList
+        })
+    }
+
+    handleSpecificDogButton = async () => {
+        console.log('specific dog button')
+        const fetchOneDog = await fetch(`http://localhost:4000/dog/showOne/:${this._id}`)
+        const oneDog = await fetchOneDog.json()
+        console.log(oneDog)
+        this.setState({
+            showDogList: oneDog
         })
     }
 
@@ -41,7 +53,11 @@ class DogButtons extends React.Component {
             </>
            )}
            const allDogList = this.state.showDogList.map(doggo => {
-            return <li key={doggo._id}>{doggo.name}</li>
+            return <li key={doggo._id}>
+                    <button onClick={this.handleSpecificDogButton}>
+                        {doggo.name}
+                    </button>
+                </li>
         })
         return (
             <>
@@ -49,7 +65,6 @@ class DogButtons extends React.Component {
             <ul>
                 { allDogList } 
             </ul>
-        
             </>
         )
     }

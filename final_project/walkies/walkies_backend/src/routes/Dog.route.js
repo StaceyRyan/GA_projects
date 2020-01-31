@@ -22,6 +22,11 @@ DogRouter.get('/show_all', async (req, res) => {
     res.json(await Dog.findAll());
 });
 
+DogRouter.get('/showOne/:_id', async (req, res) => {
+    console.log(`req.params._id: ${req.params._id}`);
+    res.json(await DogModel.findById(req.params._id, req.body)).send();
+})
+
 DogRouter.put('/update/:_id', async (req, res) => {
     console.log(req.body);
     console.log(`req.params._id: ${req.params._id}`);

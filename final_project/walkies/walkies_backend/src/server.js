@@ -12,9 +12,10 @@ const AuthenticateRouter = require('./routes/Authenticate.route');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const dbName = process.env.MONGO_DB || 'walkies';
+const mongoURI = process.env.MONGODB_URI || `mongodb://localhost/${dbName}`;
 
 
-mongoose.connect(`mongodb://localhost/${dbName}`, {
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });

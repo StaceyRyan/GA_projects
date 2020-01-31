@@ -38,7 +38,6 @@ class WalkiesHome extends React.Component {
 
     }
 
-
     render() {
         return (
             <>
@@ -49,7 +48,6 @@ class WalkiesHome extends React.Component {
                             </>}
                 {this.state.buttonState === buttonStates.showLogin && <LoginForm/>}
                 {this.state.buttonState === buttonStates.showRegister && <RegistrationForm/>}
-
             </>
         )
     }

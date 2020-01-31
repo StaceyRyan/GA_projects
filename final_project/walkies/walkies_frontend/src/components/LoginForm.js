@@ -1,9 +1,7 @@
 import React from 'react';
 import DogButtons from './DogButtons';
-import {
-    BrowserRouter as Router,
-    Route
-} from 'react-router-dom';
+
+import { Redirect } from 'react-router-dom';
 
 
 class LoginForm extends React.Component {
@@ -13,7 +11,8 @@ class LoginForm extends React.Component {
         this.state = {
             username: '',
             password: '',
-            submitDisabled: true
+            submitDisabled: true,
+            goToDogButtons: false
         };
         this.handleKeyStrike = this.handleKeyStrike.bind(this);
         this.handleSubmitButton = this.handleSubmitButton.bind(this);
@@ -47,12 +46,25 @@ handleSubmitButton = async () => {
         method: 'POST',
         headers: myHeaders,
         body: raw,
-        redirect: 'follow'
+        redirect: 'follow',
+        credentials: "same-origin"
     };
 
-    const loginUser = fetch("http://localhost:4000/auth/login", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
+    const loginUser = fetch("/auth/login", requestOptions)
+        .then(response => {
+            if(+response.status === 200)
+            {
+                return response;
+            } 
+            Promise.reject();
+        })
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            this.setState({
+                goToDogButtons: true
+            })
+        })
         .catch(error => console.log('error', error));
 
     console.log('API login ' + JSON.stringify(loginUser));
@@ -61,6 +73,7 @@ handleSubmitButton = async () => {
 render() {
     return (
         <>
+        {this.state.goToDogButtons && <Redirect to="/DogButtons" />}
             <div className={"form-group"}>
                 <label>
                     Username:
@@ -77,11 +90,13 @@ render() {
                     className={"form-control"}
                     onChange={this.handleKeyStrike} />
             </label>
-            <button onClick={this.handleSubmitButton} disabled={this.state.submitDisabled}>Submit</button>
-            <Router>
-                {console.log("Rredirect path")}
-                <DogButtons />
-            </Router>
+            <button onClick={this.handleSubmitButton} 
+                    disabled={this.state.submitDisabled} 
+                    >Submit</button>
+            {/* todo make this a route redirect */}
+            {/* {<DogButtons />} */}
+            
+            
         </>
     )
 }

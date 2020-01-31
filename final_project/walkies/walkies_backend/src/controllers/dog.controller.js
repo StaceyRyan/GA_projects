@@ -25,6 +25,12 @@ class DogControl {
         return DogModel.find({})
     }
 
+    async findById(_id, body){
+        console.log(`dog located: ${name}`);
+        let oneDog = await DogModel.findById({_id: _id});
+        return oneDog;
+    }
+
     async updateById(_id, body) {
         console.log(`value of _id: ${_id}`);
         let updateRecord = await DogModel.findOneAndUpdate({_id: _id}, body, { new: true });
