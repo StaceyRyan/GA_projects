@@ -19,6 +19,7 @@
 * More cleaning - keeping formatting tidy, removing redundant code, taking out console logs.
 
 ### &#x1F535; Installation
+Download the files in this repository.
 Load the index.html into a Chrome browser for optimal results.
 This application has not been tested in other browsers.
 
